@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Le groupe qui te fait tenir — @nonokhb</title>
+<meta name="description" content="Rejoins un groupe de filles qui veulent perdre du poids comme toi. Sans régime, sans culpabilité. Tu ne lâches plus, parce que tu n'es plus seule.">
+<meta property="og:title" content="Cette fois, tu ne lâches pas. T'es plus seule.">
+<meta property="og:description" content="Un groupe de filles qui veulent perdre du poids comme toi, et qui font que tu tiens. Sans régime, sans culpabilité.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#7c3fc0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- ===== CRISP (remplace par ton WEBSITE_ID) ===== -->
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="4a287af3-48c4-4f93-a093-9cbde8f49688";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fbf6fd;--surface:#f6edfa;--card:#ffffff;--border:#ecdcf3;
+  --violet:#7c3fc0;--violet2:#9b6fd4;--rose:#d4537e;--rose2:#e87aa0;
+  --ink:#3a2150;--white:#fff;--muted:#8a7799;--dimmed:#b7a8c4;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Outfit',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:rgba(251,246,253,.82);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.logo{font-size:18px;font-weight:800;letter-spacing:-.5px;color:var(--ink)}
+.logo span{color:var(--violet)}
+.nav-r{display:flex;align-items:center;gap:12px}
+.nav-cta{font-size:12px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--rose),var(--violet));padding:9px 18px;border-radius:10px;transition:transform .2s,box-shadow .2s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(124,63,192,.3)}
+
+.hamburger{width:32px;height:32px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;background:none;border:none;padding:4px;z-index:200}
+.hamburger s1,.hamburger s2,.hamburger s3{display:block;width:20px;height:2px;background:var(--muted);border-radius:2px;transition:all .3s ease}
+.hamburger.open s1{transform:rotate(45deg) translate(3px,5px)}
+.hamburger.open s2{opacity:0}
+.hamburger.open s3{transform:rotate(-45deg) translate(3px,-5px)}
+
+.nav-menu{position:fixed;top:54px;right:0;width:240px;background:var(--card);border:1px solid var(--border);border-radius:0 0 0 12px;padding:8px 0;display:none;z-index:150;box-shadow:0 16px 48px rgba(124,63,192,.15)}
+.nav-menu.open{display:block}
+.nav-menu a{display:block;padding:12px 20px;font-size:13px;color:var(--muted);transition:color .2s,background .2s}
+.nav-menu a:hover{color:var(--ink);background:var(--surface)}
+
+.hero{min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 24px 80px;position:relative}
+.hero::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:560px;height:560px;background:radial-gradient(circle,rgba(212,83,126,.10) 0%,rgba(124,63,192,.06) 40%,transparent 70%);pointer-events:none}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);padding:6px 14px;border-radius:100px;font-size:11px;font-weight:600;color:var(--violet);letter-spacing:.5px;text-transform:uppercase;margin-bottom:28px;animation:fu .5s ease both}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--rose);animation:pulse 2s infinite}
+h1{font-size:clamp(28px,6.5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-2px;max-width:600px;color:var(--ink);animation:fu .5s ease .1s both}
+h1 em{font-style:normal;background:linear-gradient(135deg,var(--rose),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:clamp(14px,2.2vw,17px);color:var(--muted);max-width:460px;line-height:1.65;margin-top:16px;animation:fu .5s ease .2s both}
+.hero-ctas{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;justify-content:center;animation:fu .5s ease .3s both}
+
+.btn-main{display:inline-flex;align-items:center;gap:10px;color:#fff;font-size:15px;font-weight:700;padding:15px 28px;border-radius:14px;cursor:pointer;position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(232,122,160,.85),rgba(124,63,192,.9));border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 8px 28px rgba(124,63,192,.28),inset 0 1px 0 rgba(255,255,255,.45);transition:transform .2s,box-shadow .2s}
+.btn-main::before{content:'';position:absolute;top:0;left:0;right:0;height:48%;background:linear-gradient(180deg,rgba(255,255,255,.4),transparent);pointer-events:none}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 14px 38px rgba(124,63,192,.36),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn-main .price{background:rgba(255,255,255,.25);border:1px solid rgba(255,255,255,.3);padding:3px 10px;border-radius:50px;font-size:14px}
+.hero-note{margin-top:14px;font-size:11px;color:var(--dimmed);animation:fu .5s ease .4s both}
+
+.hr{height:1px;background:var(--border);margin:0 24px}
+.sec{max-width:640px;margin:0 auto;padding:56px 24px}
+.sec-label{font-size:10px;font-weight:700;color:var(--violet);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px}
+.sec-title{font-size:clamp(22px,4vw,32px);font-weight:800;line-height:1.2;letter-spacing:-.8px;margin-bottom:28px;color:var(--ink)}
+.sec-body{font-size:14px;color:var(--muted);line-height:1.7}
+.sec-body strong{color:var(--ink);font-weight:700}
+.sec-body+.sec-body{margin-top:14px}
+
+.steps{display:flex;flex-direction:column;gap:20px}
+.stepc{display:flex;gap:16px;align-items:flex-start}
+.step-num{min-width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--surface);border:1px solid var(--border);border-radius:10px;font-size:15px;font-weight:800;color:var(--violet)}
+.step-title{font-size:15px;font-weight:700;margin-bottom:3px;color:var(--ink)}
+.step-desc{font-size:13px;color:var(--muted);line-height:1.5}
+
+.cards{display:flex;flex-direction:column;gap:12px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 4px 18px rgba(124,63,192,.05)}
+.card-icon{font-size:22px;min-width:28px;text-align:center}
+.card-title{font-size:14px;font-weight:700;margin-bottom:3px;color:var(--ink)}
+.card-text{font-size:12px;color:var(--muted);line-height:1.5}
+
+.highlight{background:linear-gradient(160deg,var(--surface),#f3e6f9);border:1px solid var(--border);border-radius:16px;padding:28px;text-align:center;max-width:640px;margin:0 auto}
+.highlight h2{font-size:20px;font-weight:800;margin-bottom:10px;letter-spacing:-.5px;color:var(--ink)}
+.highlight p{font-size:14px;color:var(--muted);line-height:1.65}
+
+.testi{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--violet2);border-radius:0 12px 12px 0;padding:16px 18px;margin-bottom:10px;box-shadow:0 4px 16px rgba(124,63,192,.05)}
+.testi p{font-size:14px;color:var(--ink);line-height:1.5;font-style:italic;margin-bottom:7px}
+.testi .who{font-size:12px;font-weight:700;color:var(--violet)}
+.testi-note{text-align:center;font-size:12px;color:var(--muted);margin-top:14px}
+
+.faq-item{border-bottom:1px solid var(--border);padding:16px 0}
+.faq-q{font-size:14px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;color:var(--ink)}
+.faq-q::after{content:'+';font-size:18px;font-weight:300;color:var(--violet);transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}
+.faq-item.open .faq-a{max-height:400px;padding-top:10px}
+.faq-a p{font-size:13px;color:var(--muted);line-height:1.65}
+
+.price-wrap{max-width:640px;margin:0 auto;padding:56px 24px;text-align:center}
+.price-box{background:linear-gradient(160deg,var(--violet),var(--violet2));border-radius:20px;padding:34px 26px;color:#fff;box-shadow:0 16px 40px rgba(124,63,192,.3);position:relative;overflow:hidden}
+.price-box::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:radial-gradient(circle,rgba(232,122,160,.4),transparent 70%);pointer-events:none}
+.price-amount{font-size:54px;font-weight:900;line-height:1;letter-spacing:-1px}
+.price-amount sup{font-size:24px;top:-1em;font-weight:700}
+.price-incl{font-size:14px;opacity:.92;margin-top:10px;line-height:1.5}
+.price-limit{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.2);font-size:13px;font-weight:600;padding:7px 15px;border-radius:50px;margin:18px 0 22px}
+.btn-glass-white{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;color:var(--violet);font-size:16px;font-weight:800;padding:15px 24px;border-radius:14px;cursor:pointer;background:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:inset 0 1px 0 rgba(255,255,255,.8);transition:transform .2s}
+.btn-glass-white:hover{transform:translateY(-2px)}
+.price-mini{font-size:12px;color:var(--muted);margin-top:16px}
+.price-testi{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:22px;font-size:14px;font-style:italic;color:var(--violet)}
+
+.founder{text-align:center;max-width:440px;margin:0 auto;padding:56px 24px}
+.founder-photo{width:88px;height:88px;border-radius:50%;margin:0 auto 16px;background:linear-gradient(160deg,var(--rose2),var(--violet2));display:flex;align-items:center;justify-content:center;font-size:34px;border:4px solid #fff;box-shadow:0 6px 18px rgba(124,63,192,.22);object-fit:cover}
+.founder-name{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--ink)}
+.founder-text{font-size:13px;color:var(--muted);line-height:1.7;text-align:left}
+.founder-text+.founder-text{margin-top:12px}
+
+.final{text-align:center;padding:64px 24px}
+.final h2{font-size:clamp(22px,4vw,32px);font-weight:800;letter-spacing:-.8px;margin-bottom:10px;color:var(--ink)}
+.final p{font-size:14px;color:var(--muted);margin-bottom:28px}
+.final .hero-ctas{animation:none}
+.final .snap{margin-top:18px;font-size:11px;color:var(--dimmed)}
+
+footer{text-align:center;padding:28px 24px;border-top:1px solid var(--border)}
+.foot-logo{font-size:16px;font-weight:800;margin-bottom:4px;color:var(--ink)}
+.foot-logo span{color:var(--violet)}
+footer p{font-size:11px;color:var(--dimmed);margin-top:3px}
+footer a{color:var(--muted)}
+
+.legal-page{display:none;max-width:640px;margin:0 auto;padding:100px 24px 60px}
+.legal-page.active{display:block}
+.legal-page h2{font-size:24px;font-weight:800;margin-bottom:8px;color:var(--ink)}
+.legal-page .legal-date{font-size:12px;color:var(--dimmed);margin-bottom:24px}
+.legal-page h3{font-size:16px;font-weight:700;margin:24px 0 8px;color:var(--violet)}
+.legal-page p{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:8px}
+.legal-back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--violet);margin-bottom:24px;cursor:pointer}
+.legal-back:hover{text-decoration:underline}
+
+#mainContent{display:block}
+#mainContent.hidden{display:none}
+
+@keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* ============ ONBOARDING OVERLAY ============ */
+.onb{position:fixed;inset:0;z-index:500;display:none;background:
+  radial-gradient(120% 60% at 80% -10%,rgba(212,83,126,.10),transparent 55%),
+  radial-gradient(110% 50% at 0% 0%,rgba(124,63,192,.08),transparent 50%),
+  var(--bg);overflow-y:auto}
+.onb.open{display:block}
+.onb-app{max-width:480px;margin:0 auto;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;padding:0 20px}
+.topbar{padding:18px 0 8px;display:flex;align-items:center;gap:14px}
+.back{width:40px;height:40px;flex-shrink:0;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:12px;background:rgba(255,255,255,.55);border:1px solid rgba(124,63,192,.18);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--violet);transition:transform .15s,background .2s,opacity .2s}
+.back:hover{transform:translateY(-1px);background:rgba(255,255,255,.8)}
+.back:active{transform:scale(.95)}
+.progress{flex:1;height:12px;border-radius:50px;overflow:hidden;background:rgba(255,255,255,.5);border:1px solid rgba(124,63,192,.18);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:inset 0 1px 2px rgba(124,63,192,.08)}
+.progress-fill{height:100%;width:33%;border-radius:50px;background:linear-gradient(90deg,var(--rose2),var(--rose),var(--violet));box-shadow:0 0 12px rgba(212,83,126,.4),inset 0 1px 0 rgba(255,255,255,.5);transition:width .45s cubic-bezier(.4,0,.2,1)}
+.step-count{font-size:12px;font-weight:700;color:var(--violet);flex-shrink:0;min-width:30px;text-align:right}
+.stage{flex:1;display:flex;flex-direction:column;justify-content:center;padding:8px 0 24px}
+.ostep{display:none;animation:fade .35s ease both}
+.ostep.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.o-eyebrow{font-size:11px;font-weight:700;color:var(--violet);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+.q-title{font-size:clamp(24px,6vw,32px);font-weight:800;line-height:1.18;letter-spacing:-.8px;color:var(--ink);margin-bottom:8px}
+.q-sub{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:26px}
+.options{display:flex;flex-direction:column;gap:11px}
+.opt{width:100%;text-align:left;cursor:pointer;display:flex;align-items:center;gap:13px;padding:17px 18px;border-radius:15px;background:rgba(255,255,255,.65);border:1.5px solid var(--border);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font-family:'Outfit',sans-serif;font-size:15.5px;font-weight:600;color:var(--ink);transition:transform .15s,border-color .2s,background .2s,box-shadow .2s}
+.opt:hover{transform:translateY(-1px);border-color:var(--violet2);background:rgba(255,255,255,.85)}
+.opt:active{transform:scale(.99)}
+.opt.selected{border-color:var(--violet);background:linear-gradient(135deg,rgba(232,122,160,.16),rgba(124,63,192,.14));box-shadow:0 6px 20px rgba(124,63,192,.16)}
+.opt .tick{width:24px;height:24px;flex-shrink:0;border-radius:50%;border:2px solid var(--dimmed);display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s}
+.opt.selected .tick{border-color:var(--violet);background:var(--violet)}
+.opt .tick svg{width:13px;height:13px;stroke:#fff;opacity:0;transition:opacity .2s}
+.opt.selected .tick svg{opacity:1}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:7px}
+.field input{width:100%;font-family:'Outfit',sans-serif;font-size:16px;color:var(--ink);padding:15px 16px;border-radius:14px;background:rgba(255,255,255,.7);border:1.5px solid var(--border);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:border-color .2s,box-shadow .2s}
+.field input::placeholder{color:var(--dimmed)}
+.field input:focus{outline:none;border-color:var(--violet);box-shadow:0 0 0 3px rgba(124,63,192,.14)}
+.field .err{font-size:12px;color:var(--rose);margin-top:6px;display:none}
+.field.invalid .err{display:block}
+.field.invalid input{border-color:var(--rose)}
+.ofoot{padding:12px 0 calc(20px + env(safe-area-inset-bottom))}
+.btn-next{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;color:#fff;font-family:'Outfit',sans-serif;font-size:16px;font-weight:800;padding:17px 24px;border-radius:16px;cursor:pointer;position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(232,122,160,.9),rgba(124,63,192,.92));border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 8px 28px rgba(124,63,192,.3),inset 0 1px 0 rgba(255,255,255,.5);transition:transform .2s,box-shadow .2s,opacity .2s}
+.btn-next::before{content:'';position:absolute;top:0;left:0;right:0;height:48%;background:linear-gradient(180deg,rgba(255,255,255,.4),transparent);pointer-events:none}
+.btn-next:hover{transform:translateY(-2px);box-shadow:0 14px 38px rgba(124,63,192,.38),inset 0 1px 0 rgba(255,255,255,.55)}
+.btn-next:active{transform:scale(.98)}
+.btn-next:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:0 4px 14px rgba(124,63,192,.18)}
+.btn-next svg{width:17px;height:17px}
+.spin{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:rot .7s linear infinite;display:none}
+.btn-next.loading .spin{display:inline-block}
+.btn-next.loading .lbl,.btn-next.loading svg.arr{display:none}
+@keyframes rot{to{transform:rotate(360deg)}}
+.done{display:none;flex:1;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 10px;animation:fade .4s ease both}
+.done.active{display:flex}
+.done .ring{width:88px;height:88px;border-radius:50%;margin-bottom:22px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--rose2),var(--violet));box-shadow:0 12px 30px rgba(124,63,192,.3)}
+.done .ring svg{width:42px;height:42px;stroke:#fff}
+.done h2{font-size:26px;font-weight:800;color:var(--ink);margin-bottom:10px;letter-spacing:-.6px}
+.done p{font-size:14.5px;color:var(--muted);line-height:1.65;max-width:340px}
+.done .small{font-size:12px;color:var(--dimmed);margin-top:18px}
+
+@media(max-width:600px){nav{padding:12px 16px}.hero{padding:100px 20px 60px}.hero-ctas{flex-direction:column;width:100%;padding:0 16px}.btn-main{width:100%;justify-content:center}.sec{padding:44px 20px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo" onclick="showMain();return false;">no<span>nokhb</span></a>
+  <div class="nav-r">
+    <a href="#" class="nav-cta js-onboarding">Je rejoins mon groupe</a>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()"><s1></s1><s2></s2><s3></s3></button>
+  </div>
+</nav>
+
+<div class="nav-menu" id="navMenu">
+  <a href="#how" onclick="goTo('how')">Comment &ccedil;a marche</a>
+  <a href="#get" onclick="goTo('get')">Ce que tu vis</a>
+  <a href="#why" onclick="goTo('why')">Pourquoi &ccedil;a marche</a>
+  <a href="#avis" onclick="goTo('avis')">Les filles en parlent</a>
+  <a href="#faq" onclick="goTo('faq')">FAQ</a>
+  <a href="#who" onclick="goTo('who')">Qui je suis</a>
+  <a href="#cgu" onclick="showPage('cgu');toggleMenu()">CGU</a>
+  <a href="#privacy" onclick="showPage('privacy');toggleMenu()">Confidentialit&eacute;</a>
+</div>
+
+<div id="mainContent">
+
+<section class="hero">
+  <span class="badge"><span class="badge-dot"></span>Places limit&eacute;es par groupe</span>
+  <h1>Cette fois, tu ne l&acirc;ches pas. <em>T'es plus seule.</em></h1>
+  <p class="hero-sub">Un groupe de filles qui veulent perdre du poids comme toi, et qui font que tu tiens m&ecirc;me les jours sans motivation. Sans r&eacute;gime. Sans culpabilit&eacute;.</p>
+  <div class="hero-ctas">
+    <a href="#" class="btn-main js-onboarding">
+      Je rejoins mon groupe <span class="price">14,99€</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+  <p class="hero-note">Groupe perso selon tes objectifs · Sur Snap</p>
+</section>
+
+<div class="hr"></div>
+
+<section class="sec">
+  <p class="sec-label">On se dit les vraies choses</p>
+  <h2 class="sec-title">Tu connais d&eacute;j&agrave; ce sc&eacute;nario.</h2>
+  <p class="sec-body">Tu d&eacute;cides de t'y remettre. &Agrave; fond les premiers jours. Et puis la vie reprend le dessus, la motivation retombe, et tu te retrouves seule face &agrave; ton frigo un dimanche soir.</p>
+  <p class="sec-body">C'est pas un manque de volont&eacute;. <strong>Personne ne tient sur la dur&eacute;e tout seul.</strong> Et jusqu'ici, tu faisais &ccedil;a seule.</p>
+</section>
+
+<div class="hr"></div>
+
+<section class="sec">
+  <p class="sec-label">Imagine plut&ocirc;t &ccedil;a</p>
+  <h2 class="sec-title">Un lundi matin, z&eacute;ro motivation.</h2>
+  <p class="sec-body">Mais dans ton groupe, une fille a d&eacute;j&agrave; partag&eacute; sa s&eacute;ance. Une autre raconte qu'elle a tenu hier soir. Et toi tu te dis &laquo; allez, je m'y mets aussi &raquo;.</p>
+  <p class="sec-body">Pas par discipline. Parce que tu fais partie d'un truc. Parce que les filles comptent sur toi autant que tu comptes sur elles.</p>
+  <p class="sec-body"><strong>C'est &ccedil;a qui fait que cette fois, tu tiens.</strong> Et les kilos finissent par suivre — sans t'&ecirc;tre affam&eacute;e pour &ccedil;a.</p>
+</section>
+
+<div class="hr"></div>
+
+<section class="sec" id="how">
+  <p class="sec-label">Comment &ccedil;a marche</p>
+  <h2 class="sec-title">3 &eacute;tapes. Rien de plus.</h2>
+  <div class="steps">
+    <div class="stepc"><div class="step-num">1</div><div><p class="step-title">Tu r&eacute;ponds &agrave; 2 questions</p><p class="step-desc">Ton objectif, ton rapport au sport. 1 minute, pour que je te place au bon endroit.</p></div></div>
+    <div class="stepc"><div class="step-num">2</div><div><p class="step-title">Je te mets avec les bonnes filles</p><p class="step-desc">Je te place &agrave; la main avec des filles qui ont le m&ecirc;me profil que toi. Perdre 5kg ou 30kg, avec sport ou sans — t'es bien entour&eacute;e.</p></div></div>
+    <div class="stepc"><div class="step-num">3</div><div><p class="step-title">Tu re&ccedil;ois ton acc&egrave;s et on commence</p><p class="step-desc">Le lien du groupe Snap arrive par mail d&egrave;s ton paiement valid&eacute;.</p></div></div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<section class="sec" id="get">
+  <p class="sec-label">Concr&egrave;tement</p>
+  <h2 class="sec-title">Ce que &ccedil;a change pour toi.</h2>
+  <div class="cards">
+    <div class="card"><div class="card-icon">🫂</div><div><p class="card-title">Tu te sens plus seule</p><p class="card-text">Y a toujours une fille qui vit la m&ecirc;me chose que toi en ce moment. Une envie de craquer, un plateau, une fiert&eacute; — t'es plus seule avec &ccedil;a.</p></div></div>
+    <div class="card"><div class="card-icon">⚡</div><div><p class="card-title">Tu te relances m&ecirc;me les mauvais jours</p><p class="card-text">Pas besoin d'&ecirc;tre parfaite. Le groupe te tire vers le haut quand t'as plus d'&eacute;nergie pour toi-m&ecirc;me.</p></div></div>
+    <div class="card"><div class="card-icon">🌱</div><div><p class="card-title">Tu construis des habitudes qui tiennent</p><p class="card-text">Pas un r&eacute;gime qu'on l&acirc;che en une semaine. Des petits pas, sans restriction ni culpabilit&eacute;.</p></div></div>
+    <div class="card"><div class="card-icon">🎯</div><div><p class="card-title">Tu avances vers ton objectif, pour de vrai</p><p class="card-text">Parce que la r&eacute;gularit&eacute; dans la dur&eacute;e fait plus que n'importe quel r&eacute;gime express.</p></div></div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<section style="padding:56px 24px;" id="why">
+  <div class="highlight">
+    <p class="sec-label">Pourquoi &ccedil;a marche</p>
+    <h2>Tu n'as pas &eacute;chou&eacute;. Tu faisais &ccedil;a seule.</h2>
+    <p>La volont&eacute; seule ne suffit pas. Les r&eacute;gimes seuls ne suffisent pas. Ce qui manquait, c'&eacute;tait des filles qui vivent la m&ecirc;me chose que toi — pour ne pas l&acirc;cher les jours o&ugrave; t'as envie de tout envoyer balader. C'est &ccedil;a, la vraie diff&eacute;rence.</p>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<section class="sec" id="avis">
+  <p class="sec-label">Les filles en parlent</p>
+  <h2 class="sec-title">Des filles comme toi. Qui avancent.</h2>
+  <div class="testi"><p>&laquo; C'est gr&acirc;ce &agrave; ton groupe que je ne me sens plus seule dans cette bataille. &raquo;</p><span class="who">— Une participante</span></div>
+  <div class="testi"><p>&laquo; J'avais perdu 15kg gr&acirc;ce au groupe. C'&eacute;tait vraiment b&eacute;n&eacute;fique pour moi. &raquo;</p><span class="who">— L.</span></div>
+  <div class="testi"><p>&laquo; J'ai mis une robe pour la premi&egrave;re fois de ma vie. Pour moi c'est un cap ph&eacute;nom&eacute;nal. &raquo;</p><span class="who">— Fatima</span></div>
+  <div class="testi"><p>&laquo; Gr&acirc;ce aux groupes &ccedil;a aide &agrave; rester motiv&eacute;e, &agrave; se d&eacute;passer et &agrave; partager ensemble. &raquo;</p><span class="who">— BtiSs</span></div>
+  <div class="testi"><p>&laquo; Topissime — merci pour les challenges, les groupes, la bienveillance des filles. &raquo;</p><span class="who">— Une participante</span></div>
+  <p class="testi-note">Captures de vrais messages re&ccedil;us de la communaut&eacute; 💜</p>
+</section>
+
+<div class="hr"></div>
+
+<section class="price-wrap">
+  <p class="sec-label">Ta place</p>
+  <h2 class="sec-title">Pour moins qu'un repas au resto.</h2>
+  <div class="price-testi">&laquo; C'est gr&acirc;ce &agrave; ton groupe que je ne me sens plus seule dans cette bataille. &raquo;</div>
+  <div class="price-box">
+    <div class="price-amount"><sup>€</sup>14,99</div>
+    <p class="price-incl">Acc&egrave;s au groupe Snap priv&eacute; perso</p>
+    <span class="price-limit">⚠️ Places limit&eacute;es par groupe</span>
+    <a href="#" class="btn-glass-white js-onboarding">Je rejoins mon groupe</a>
+  </div>
+  <p class="price-mini">D&egrave;s ton paiement valid&eacute;, tu re&ccedil;ois tout par mail.</p>
+</section>
+
+<div class="hr"></div>
+
+<section class="sec" id="faq">
+  <p class="sec-label">Tes questions</p>
+  <h2 class="sec-title">Mes r&eacute;ponses honn&ecirc;tes.</h2>
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">C'est pour qui ?</div><div class="faq-a"><p>Pour toutes les femmes qui veulent perdre du poids ou se remettre en forme. Peu importe ton objectif, ton niveau, ta situation. Si tu veux arr&ecirc;ter de faire &ccedil;a seule, c'est pour toi.</p></div></div>
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Et si je perds pas de poids ?</div><div class="faq-a"><p>Je te promets pas un chiffre — personne peut le faire honn&ecirc;tement. Ce que je te promets : t'es entour&eacute;e, tu l&acirc;ches pas seule, et t'as des bases saines pour avancer &agrave; ton rythme.</p></div></div>
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Je dois suivre un r&eacute;gime strict ?</div><div class="faq-a"><p>Non. Z&eacute;ro restriction, z&eacute;ro culpabilit&eacute;. On compte pas les calories, on se punit pas. On avance doucement mais s&ucirc;rement.</p></div></div>
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Comment je suis plac&eacute;e dans mon groupe ?</div><div class="faq-a"><p>Tu r&eacute;ponds &agrave; 2 questions. Je lis chaque r&eacute;ponse et je te place &agrave; la main avec des filles qui ont le m&ecirc;me profil et les m&ecirc;mes objectifs que toi.</p></div></div>
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">&Ccedil;a se passe o&ugrave; ?</div><div class="faq-a"><p>Sur Snap, dans un groupe priv&eacute;. Si t'as pas l'appli, elle est gratuite et s'installe en 2 minutes.</p></div></div>
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Quand je re&ccedil;ois mon acc&egrave;s ?</div><div class="faq-a"><p>D&egrave;s que ton paiement est valid&eacute;, je t'envoie le lien du groupe par mail.</p></div></div>
+</section>
+
+<div class="hr"></div>
+
+<section class="founder" id="who">
+  <p class="sec-label">Qui je suis</p>
+  <div class="founder-photo" id="photo">🌸</div>
+  <p class="founder-name">No&eacute;mie — @nonokhb</p>
+  <p class="founder-text">Je suis pas coach certifi&eacute;e. Je vends pas de compl&eacute;ments. Je te promets pas -10kg en 3 semaines.</p>
+  <p class="founder-text">Ce que je fais depuis bient&ocirc;t un an : j'anime des groupes de motivation sur Snap pour des femmes qui veulent perdre du poids sans se d&eacute;truire. Mon truc c'est z&eacute;ro restriction, z&eacute;ro culpabilit&eacute; — parce que j'ai vu trop de filles abandonner &agrave; cause d'une m&eacute;thode trop dure.</p>
+  <p class="founder-text">Ce qui m'anime : que chaque fille reparte en se sentant moins seule, plus forte, et un peu plus proche de son objectif. Une question ? Le chat est en bas &agrave; droite.</p>
+</section>
+
+<div class="hr"></div>
+
+<section class="final" id="join">
+  <h2>La prochaine version de toi<br>commence ici.</h2>
+  <p>Tu peux continuer &agrave; r&eacute;essayer seule. Ou rejoindre les filles qui ont arr&ecirc;t&eacute; de se battre contre elles-m&ecirc;mes.</p>
+  <div class="hero-ctas">
+    <a href="#" class="btn-main js-onboarding">
+      Je rejoins mon groupe <span class="price">14,99€</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+  <p class="snap">Une question ? Envoie-moi un DM sur Snap @nonokhb</p>
+</section>
+
+</div>
+
+<div id="page-cgu" class="legal-page">
+  <div class="legal-back" onclick="showMain()">&larr; Retour</div>
+  <h2>Conditions g&eacute;n&eacute;rales</h2>
+  <p class="legal-date">En vigueur : 2026</p>
+  <h3>Objet</h3>
+  <p>Ces conditions r&eacute;gissent l'acc&egrave;s aux groupes de motivation payants anim&eacute;s par @nonokhb. L'achat donne acc&egrave;s &agrave; un groupe priv&eacute; sur Snapchat.</p>
+  <h3>Acc&egrave;s &amp; placement</h3>
+  <p>Apr&egrave;s paiement, tu es plac&eacute;e manuellement dans un groupe selon tes r&eacute;ponses au questionnaire. L'acc&egrave;s est envoy&eacute; par mail.</p>
+  <h3>Nature du service</h3>
+  <p>Il s'agit d'un accompagnement par l'entraide communautaire. Aucun r&eacute;sultat de perte de poids n'est garanti. Le service ne remplace pas un avis m&eacute;dical ou di&eacute;t&eacute;tique.</p>
+  <h3>Remboursement</h3>
+  <p>L'acc&egrave;s &eacute;tant num&eacute;rique et imm&eacute;diat, contacte-moi via le chat pour toute question relative &agrave; ton inscription.</p>
+</div>
+
+<div id="page-privacy" class="legal-page">
+  <div class="legal-back" onclick="showMain()">&larr; Retour</div>
+  <h2>Politique de confidentialit&eacute;</h2>
+  <p class="legal-date">2026</p>
+  <h3>Donn&eacute;es collect&eacute;es</h3>
+  <p>Pr&eacute;nom, adresse mail et r&eacute;ponses au questionnaire (objectif, rapport au sport). Ces donn&eacute;es servent uniquement &agrave; te placer dans le bon groupe et &agrave; t'envoyer ton acc&egrave;s.</p>
+  <h3>Utilisation</h3>
+  <p>Tes donn&eacute;es ne sont ni vendues ni partag&eacute;es. Elles sont conserv&eacute;es de fa&ccedil;on s&eacute;curis&eacute;e (Supabase, h&eacute;bergement EU).</p>
+  <h3>Tes droits</h3>
+  <p>Tu peux demander &agrave; tout moment l'acc&egrave;s, la modification ou la suppression de tes donn&eacute;es via le chat ou par DM.</p>
+</div>
+
+<footer>
+  <p class="foot-logo">no<span>nokhb</span></p>
+  <p>&copy; 2026 — Groupes de motivation perte de poids</p>
+  <p><a href="#cgu" onclick="showPage('cgu')" style="text-decoration:underline">CGU</a> · <a href="#privacy" onclick="showPage('privacy')" style="text-decoration:underline">Confidentialit&eacute;</a></p>
+</footer>
+
+<!-- ============ ONBOARDING OVERLAY ============ -->
+<div class="onb" id="onb">
+  <div class="onb-app">
+    <div class="topbar" id="o-topbar">
+      <button class="back" id="o-back" aria-label="Retour">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <div class="progress"><div class="progress-fill" id="o-fill"></div></div>
+      <span class="step-count" id="o-count">1/3</span>
+    </div>
+
+    <div class="stage" id="o-stage">
+      <div class="ostep active" data-step="1">
+        <p class="o-eyebrow">On fait connaissance</p>
+        <h1 class="q-title">Quel est ton objectif principal ?</h1>
+        <p class="q-sub">Pour te placer avec des filles qui visent la m&ecirc;me chose que toi.</p>
+        <div class="options" data-name="objectif">
+          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Perdre moins de 5 kg</button>
+          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Perdre entre 5 et 10 kg</button>
+          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Perdre entre 10 et 20 kg</button>
+          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Perdre plus de 20 kg</button>
+          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Me remettre en forme / maintenir</button>
+        </div>
+      </div>
+
+      <div class="ostep" data-step="2">
+        <p class="o-eyebrow">On fait connaissance</p>
+        <h1 class="q-title">Tu fais du sport en ce moment ?</h1>
+        <p class="q-sub">Aucune mauvaise r&eacute;ponse — c'est juste pour bien t'entourer.</p>
+        <div class="options" data-name="sport">
+          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Oui, r&eacute;guli&egrave;rement (2x/semaine ou +)</button>
+          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Oui, de temps en temps</button>
+          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Non, mais je veux m'y mettre</button>
+          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Non, et je ne veux pas en faire</button>
+        </div>
+      </div>
+
+      <div class="ostep" data-step="3">
+        <p class="o-eyebrow">Dernière &eacute;tape</p>
+        <h1 class="q-title">On reste en contact ?</h1>
+        <p class="q-sub">Pour t'envoyer l'acc&egrave;s &agrave; ton groupe.</p>
+        <div class="field" id="f-prenom">
+          <label for="prenom">Ton pr&eacute;nom</label>
+          <input type="text" id="prenom" placeholder="Ex : Léa" autocomplete="given-name">
+          <span class="err">Dis-moi juste ton pr&eacute;nom 💕</span>
+        </div>
+        <div class="field" id="f-email">
+          <label for="email">Ton adresse mail</label>
+          <input type="email" id="email" placeholder="ton@email.com" autocomplete="email" inputmode="email">
+          <span class="err">Il me faut un mail valide pour t'envoyer ton acc&egrave;s.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="done" id="o-done">
+      <div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <h2>Merci, <span id="doneName">toi</span> !</h2>
+      <p>Tes r&eacute;ponses sont enregistr&eacute;es. Tu vas &ecirc;tre redirig&eacute;e vers le paiement s&eacute;curis&eacute; pour finaliser ton inscription 💜</p>
+      <p class="small">Redirection en cours...</p>
+    </div>
+
+    <div class="ofoot" id="o-foot">
+      <button class="btn-next" id="o-next" disabled>
+        <span class="lbl">Continuer</span>
+        <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <span class="spin"></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ====== CONFIG ======
+var SUPABASE_URL="https://voxpztkzllaipagnflli.supabase.co";
+var SUPABASE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZveHB6dGt6bGxhaXBhZ25mbGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NTE0ODgsImV4cCI6MjA5NjMyNzQ4OH0.PuPuafvUYo3mRE3BQGm1Do6zbfU4ANKDpsedulW_hrE";
+var PAYMENT_URL="https://buy.stripe.com/28EdR8gsW4L88X16Zu5ZC04";
+
+// ===== LANDING NAV =====
+function toggleMenu(){
+  document.getElementById('hamburgerBtn').classList.toggle('open');
+  document.getElementById('navMenu').classList.toggle('open');
+}
+function goTo(id){
+  toggleMenu();showMain();
+  setTimeout(function(){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'})},100);
+}
+document.addEventListener('click',function(e){
+  var menu=document.getElementById('navMenu');var btn=document.getElementById('hamburgerBtn');
+  if(menu.classList.contains('open')&&!menu.contains(e.target)&&!btn.contains(e.target)){
+    btn.classList.remove('open');menu.classList.remove('open');
+  }
+});
+function showPage(page){
+  document.getElementById('mainContent').classList.add('hidden');
+  document.querySelectorAll('.legal-page').forEach(function(p){p.classList.remove('active')});
+  document.getElementById('page-'+page).classList.add('active');
+  window.scrollTo(0,0);
+}
+function showMain(){
+  document.querySelectorAll('.legal-page').forEach(function(p){p.classList.remove('active')});
+  document.getElementById('mainContent').classList.remove('hidden');
+  window.scrollTo(0,0);
+}
+if(window.location.hash){
+  var h=window.location.hash.replace('#','');
+  if(['cgu','privacy'].indexOf(h)>-1)showPage(h);
+}
+
+// ===== OPEN ONBOARDING FROM ANY CTA =====
+document.querySelectorAll('.js-onboarding').forEach(function(a){
+  a.addEventListener('click',function(e){e.preventDefault();openOnb()});
+});
+function openOnb(){
+  document.getElementById('onb').classList.add('open');
+  document.body.style.overflow='hidden';
+  window.scrollTo(0,0);
+}
+function closeOnb(){
+  document.getElementById('onb').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+// ===== ONBOARDING LOGIC =====
+var TOTAL=3,current=1;
+var answers={objectif:null,sport:null,prenom:"",email:""};
+var fill=document.getElementById('o-fill');
+var count=document.getElementById('o-count');
+var backBtn=document.getElementById('o-back');
+var nextBtn=document.getElementById('o-next');
+var osteps=document.querySelectorAll('.ostep');
+
+function render(){
+  osteps.forEach(function(s){s.classList.toggle('active',+s.dataset.step===current)});
+  fill.style.width=(current/TOTAL*100)+'%';
+  count.textContent=current+'/'+TOTAL;
+  backBtn.style.visibility=(current===1)?'hidden':'visible';
+  nextBtn.querySelector('.lbl').textContent=current===TOTAL?"Valider mon inscription":"Continuer";
+  refreshNext();
+}
+function refreshNext(){
+  var ok=false;
+  if(current===1)ok=!!answers.objectif;
+  else if(current===2)ok=!!answers.sport;
+  else if(current===3)ok=answers.prenom.trim().length>0&&validEmail(answers.email);
+  nextBtn.disabled=!ok;
+}
+function validEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((e||"").trim())}
+
+document.querySelectorAll('.options').forEach(function(grp){
+  var name=grp.dataset.name;
+  grp.querySelectorAll('.opt').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      grp.querySelectorAll('.opt').forEach(function(b){b.classList.remove('selected')});
+      btn.classList.add('selected');
+      answers[name]=btn.textContent.trim();
+      refreshNext();
+    });
+  });
+});
+var prenomI=document.getElementById('prenom');
+var emailI=document.getElementById('email');
+prenomI.addEventListener('input',function(){answers.prenom=prenomI.value;document.getElementById('f-prenom').classList.remove('invalid');refreshNext()});
+emailI.addEventListener('input',function(){answers.email=emailI.value;document.getElementById('f-email').classList.remove('invalid');refreshNext()});
+
+backBtn.addEventListener('click',function(){
+  if(current>1){current--;render()} else {closeOnb()}
+});
+nextBtn.addEventListener('click',function(){
+  if(current<TOTAL){current++;render();return}
+  var fp=document.getElementById('f-prenom'),fe=document.getElementById('f-email');var bad=false;
+  if(!answers.prenom.trim()){fp.classList.add('invalid');bad=true}
+  if(!validEmail(answers.email)){fe.classList.add('invalid');bad=true}
+  if(bad)return;
+  submit();
+});
+
+function submit(){
+  nextBtn.classList.add('loading');nextBtn.disabled=true;
+  fetch(SUPABASE_URL+'/rest/v1/inscriptions',{
+    method:'POST',
+    headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},
+    body:JSON.stringify({prenom:answers.prenom.trim(),email:answers.email.trim(),objectif:answers.objectif,sport:answers.sport})
+  })
+  .then(function(r){if(!r.ok)return r.text().then(function(t){throw new Error(t||r.status)});showDone()})
+  .catch(function(e){console.log('[inscription] erreur:',e);nextBtn.classList.remove('loading');nextBtn.disabled=false;alert("Oups, un souci est survenu. Réessaie dans un instant 💜")});
+}
+function showDone(){
+  document.getElementById('o-stage').style.display='none';
+  document.getElementById('o-foot').style.display='none';
+  document.getElementById('o-topbar').style.display='none';
+  document.getElementById('doneName').textContent=answers.prenom.trim();
+  document.getElementById('o-done').classList.add('active');
+  // Quand le paiement sera prêt : décommente
+  if(PAYMENT_URL){setTimeout(function(){window.location.href=PAYMENT_URL+"?prefilled_email="+encodeURIComponent(answers.email.trim())},1400)}
+}
+render();
+</script>
+</body>
+</html>
