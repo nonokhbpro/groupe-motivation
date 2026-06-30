@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Le groupe de challenges qui te fait tenir</title>
-<meta name="description" content="Rejoins un groupe de 20 filles qui veulent perdre du poids comme toi. Un challenge motivant chaque semaine, animé par Noémie. Sans régime, sans culpabilité.">
-<meta property="og:title" content="Cette fois, tu ne lâches pas. T'es plus seule.">
-<meta property="og:description" content="Un groupe de 20 filles qui veulent perdre du poids comme toi. Un challenge motivant chaque semaine. Sans régime, sans culpabilité.">
+<title>Un challenge par semaine, un groupe qui te porte</title>
+<meta name="description" content="Rejoins un groupe de 20 filles pour ton bien-être physique et mental. Un challenge motivant chaque semaine, animé par Noémie. Habitudes qui tiennent, sans régime, sans culpabilité.">
+<meta property="og:title" content="Tes challenges, ton groupe, ton bien-être.">
+<meta property="og:description" content="Un groupe de 20 filles, un challenge chaque semaine. Pour te sentir bien dans ton corps et dans ta tête. Sans régime, sans culpabilité.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#7c3fc0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -127,6 +127,15 @@ footer{text-align:center;padding:28px 24px;border-top:1px solid var(--border)}
 footer p{font-size:11px;color:var(--dimmed);margin-top:3px}
 footer a{color:var(--muted)}
 
+.challenge-why{display:flex;flex-direction:column;gap:14px;margin:24px 0 28px}
+.cw-item{display:flex;gap:13px;align-items:flex-start;font-size:14px;color:var(--muted);line-height:1.55}
+.cw-item::before{content:'';flex-shrink:0;width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--violet));margin-top:6px}
+.cw-item strong{color:var(--ink);font-weight:700}
+.examples-label{font-size:11px;font-weight:700;color:var(--violet);text-transform:uppercase;letter-spacing:1.5px;margin-top:32px;margin-bottom:14px;text-align:center}
+.examples{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.ex-pill{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);padding:9px 16px;border-radius:100px;font-size:13px;font-weight:600;color:var(--ink);box-shadow:0 2px 10px rgba(124,63,192,.06)}
+.ex-pill .em{font-size:15px}
+
 .legal-page{display:none;max-width:640px;margin:0 auto;padding:100px 24px 60px}
 .legal-page.active{display:block}
 .legal-page h2{font-size:24px;font-weight:800;margin-bottom:8px;color:var(--ink)}
@@ -214,6 +223,7 @@ footer a{color:var(--muted)}
 
 <div class="nav-menu" id="navMenu">
   <a href="#how" onclick="goTo('how')">Comment &ccedil;a marche</a>
+  <a href="#challenges" onclick="goTo('challenges')">Pourquoi des challenges</a>
   <a href="#get" onclick="goTo('get')">Ce que tu vis</a>
   <a href="#why" onclick="goTo('why')">Pourquoi &ccedil;a marche</a>
   <a href="#avis" onclick="goTo('avis')">Les filles en parlent</a>
@@ -226,16 +236,16 @@ footer a{color:var(--muted)}
 <div id="mainContent">
 
 <section class="hero">
-  <span class="badge"><span class="badge-dot"></span>100 places &middot; Lancement le 6 ao&ucirc;t</span>
-  <h1>Cette fois, tu ne l&acirc;ches pas. <em>T'es plus seule.</em></h1>
-  <p class="hero-sub">Un groupe de 20 filles qui veulent perdre du poids comme toi, un challenge motivant chaque semaine anim&eacute; par moi. Sans r&eacute;gime. Sans culpabilit&eacute;.</p>
+  <span class="badge"><span class="badge-dot"></span>Un challenge motivant chaque semaine</span>
+  <h1>Un challenge par semaine. <em>Un groupe qui te porte.</em></h1>
+  <p class="hero-sub">Rejoins 20 filles qui veulent se sentir bien dans leur corps et dans leur t&ecirc;te. Chaque semaine, un challenge pour construire des habitudes qui tiennent. Sans r&eacute;gime. Sans culpabilit&eacute;.</p>
   <div class="hero-ctas">
     <a href="#" class="btn-main js-onboarding">
       Je rejoins mon groupe <span class="price">14,99€/mois</span>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
   </div>
-  <p class="hero-note">20 filles par groupe &middot; Un challenge chaque semaine &middot; Sur Snap</p>
+  <p class="hero-note">20 filles par groupe &middot; Anim&eacute; par moi chaque semaine &middot; Sur Snap</p>
 </section>
 
 <div class="hr"></div>
@@ -243,7 +253,7 @@ footer a{color:var(--muted)}
 <section class="sec">
   <p class="sec-label">On se dit les vraies choses</p>
   <h2 class="sec-title">Tu connais d&eacute;j&agrave; ce sc&eacute;nario.</h2>
-  <p class="sec-body">Tu d&eacute;cides de t'y remettre. &Agrave; fond les premiers jours. Et puis la vie reprend le dessus, la motivation retombe, et tu te retrouves seule face &agrave; ton frigo un dimanche soir.</p>
+  <p class="sec-body">Tu d&eacute;cides de prendre soin de toi. &Agrave; fond les premiers jours. Et puis la vie reprend le dessus, la motivation retombe, et tu te retrouves seule avec l'impression d'avoir encore l&acirc;ch&eacute;.</p>
   <p class="sec-body">C'est pas un manque de volont&eacute;. <strong>Personne ne tient sur la dur&eacute;e tout seul.</strong> Et jusqu'ici, tu faisais &ccedil;a seule.</p>
 </section>
 
@@ -252,9 +262,9 @@ footer a{color:var(--muted)}
 <section class="sec">
   <p class="sec-label">Imagine plut&ocirc;t &ccedil;a</p>
   <h2 class="sec-title">Un lundi matin, z&eacute;ro motivation.</h2>
-  <p class="sec-body">Mais dans ton groupe, le challenge de la semaine est lanc&eacute;. Une fille a d&eacute;j&agrave; partag&eacute; sa s&eacute;ance. Une autre raconte qu'elle a tenu hier soir. Et toi tu te dis &laquo; allez, je m'y mets aussi &raquo;.</p>
+  <p class="sec-body">Mais dans ton groupe, le challenge de la semaine est lanc&eacute;. Une fille a d&eacute;j&agrave; partag&eacute; sa petite victoire du jour. Une autre raconte qu'elle a tenu hier soir. Et toi tu te dis &laquo; allez, je m'y mets aussi &raquo;.</p>
   <p class="sec-body">Pas par discipline. Parce que tu fais partie d'un truc. Parce que les filles comptent sur toi autant que tu comptes sur elles.</p>
-  <p class="sec-body"><strong>C'est &ccedil;a qui fait que cette fois, tu tiens.</strong> Et les kilos finissent par suivre — sans t'&ecirc;tre affam&eacute;e pour &ccedil;a.</p>
+  <p class="sec-body"><strong>C'est &ccedil;a qui fait que cette fois, tu tiens.</strong> Tu te sens mieux dans ta t&ecirc;te, plus l&eacute;g&egrave;re dans ton corps. Et tout le reste — les kilos, la confiance, l'&eacute;nergie — finit par suivre.</p>
 </section>
 
 <div class="hr"></div>
@@ -263,9 +273,34 @@ footer a{color:var(--muted)}
   <p class="sec-label">Comment &ccedil;a marche</p>
   <h2 class="sec-title">3 &eacute;tapes. Rien de plus.</h2>
   <div class="steps">
-    <div class="stepc"><div class="step-num">1</div><div><p class="step-title">Tu r&eacute;ponds &agrave; 2 questions</p><p class="step-desc">Ton objectif, ton rapport au sport. 1 minute, pour que je te place au bon endroit.</p></div></div>
-    <div class="stepc"><div class="step-num">2</div><div><p class="step-title">Je te mets avec 20 filles qui te ressemblent</p><p class="step-desc">Je te place &agrave; la main dans un groupe de 20 max avec des filles qui ont le m&ecirc;me profil que toi. Perdre 5kg ou 30kg, avec sport ou sans — t'es bien entour&eacute;e.</p></div></div>
-    <div class="stepc"><div class="step-num">3</div><div><p class="step-title">Le 6 ao&ucirc;t, ton groupe d&eacute;marre</p><p class="step-desc">Une fois ton paiement valid&eacute;, je t'envoie le lien du groupe Snap par mail. Le 6 ao&ucirc;t, je te donne ton premier challenge et on avance ensemble.</p></div></div>
+    <div class="stepc"><div class="step-num">1</div><div><p class="step-title">Tu r&eacute;ponds &agrave; 2 questions</p><p class="step-desc">Ce qui t'am&egrave;ne ici, ton rapport au sport. 1 minute, pour que je te place au bon endroit.</p></div></div>
+    <div class="stepc"><div class="step-num">2</div><div><p class="step-title">Je te mets avec 20 filles qui te ressemblent</p><p class="step-desc">Je te place &agrave; la main dans un groupe de 20 max avec des filles qui ont les m&ecirc;mes intentions que toi. Perdre du poids, retrouver des bonnes habitudes, te sentir mieux dans ta t&ecirc;te — t'es bien entour&eacute;e.</p></div></div>
+    <div class="stepc"><div class="step-num">3</div><div><p class="step-title">Le 15 juillet, ton groupe d&eacute;marre</p><p class="step-desc">Une fois ton paiement valid&eacute;, je t'envoie le lien du groupe Snap par mail. Le 15 juillet, je te donne ton premier challenge et on avance ensemble.</p></div></div>
+  </div>
+</section>
+
+<div class="hr"></div>
+
+<section class="sec" id="challenges">
+  <p class="sec-label">Pourquoi des challenges</p>
+  <h2 class="sec-title">Un cap par semaine. <em style="font-style:normal;background:linear-gradient(135deg,var(--rose),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent">Une petite victoire &agrave; la fois.</em></h2>
+  <p class="sec-body">Un objectif vague ne d&eacute;clenche rien. Un challenge concret, lui, te donne quelque chose &agrave; faire <strong>l&agrave;, cette semaine</strong>.</p>
+  <div class="challenge-why">
+    <div class="cw-item"><span><strong>Un cap clair chaque semaine.</strong> Plus de &laquo; faut que je m'y mette &raquo; dans le vague. Tu sais exactement ce sur quoi tu te concentres.</span></div>
+    <div class="cw-item"><span><strong>Une dynamique collective.</strong> Toutes les filles du groupe font le m&ecirc;me challenge en m&ecirc;me temps. C'est ce qui fait que tu tiens m&ecirc;me quand ta motivation flanche.</span></div>
+    <div class="cw-item"><span><strong>Des petites victoires qu'on c&eacute;l&egrave;bre.</strong> Pas besoin d'attendre des r&eacute;sultats spectaculaires : chaque challenge tenu compte.</span></div>
+    <div class="cw-item"><span><strong>Des habitudes qui s'installent par petites touches.</strong> Une semaine apr&egrave;s l'autre, tu construis une vie qui te ressemble vraiment.</span></div>
+  </div>
+  <p class="examples-label">Quelques exemples de challenges</p>
+  <div class="examples">
+    <span class="ex-pill"><span class="em">💧</span>On boit 2L d'eau par jour</span>
+    <span class="ex-pill"><span class="em">🚶‍♀️</span>On bouge 20 min chaque jour</span>
+    <span class="ex-pill"><span class="em">💜</span>On s'auto-valorise</span>
+    <span class="ex-pill"><span class="em">🍳</span>3 repas maison dans la semaine</span>
+    <span class="ex-pill"><span class="em">🧘‍♀️</span>On m&eacute;dite 5 min par jour</span>
+    <span class="ex-pill"><span class="em">😴</span>Au lit avant 23h</span>
+    <span class="ex-pill"><span class="em">📵</span>Z&eacute;ro &eacute;cran apr&egrave;s 22h</span>
+    <span class="ex-pill"><span class="em">🌿</span>10 min pour soi chaque matin</span>
   </div>
 </section>
 
@@ -276,9 +311,9 @@ footer a{color:var(--muted)}
   <h2 class="sec-title">Ce que &ccedil;a change pour toi.</h2>
   <div class="cards">
     <div class="card"><div class="card-icon">🫂</div><div><p class="card-title">Tu te sens plus seule</p><p class="card-text">Y a toujours une fille qui vit la m&ecirc;me chose que toi en ce moment. Une envie de craquer, un plateau, une fiert&eacute; — t'es plus seule avec &ccedil;a.</p></div></div>
-    <div class="card"><div class="card-icon">🏆</div><div><p class="card-title">Un challenge motivant chaque semaine</p><p class="card-text">Chaque semaine, je te donne un objectif concret &agrave; tenir : boire 2L d'eau, faire 10 000 pas, z&eacute;ro grignotage… On le fait ensemble dans le groupe.</p></div></div>
+    <div class="card"><div class="card-icon">🧠</div><div><p class="card-title">Tu te sens mieux dans ta t&ecirc;te</p><p class="card-text">Moins de culpabilit&eacute;, plus de bienveillance envers toi-m&ecirc;me. Le mental compte autant que le reste.</p></div></div>
     <div class="card"><div class="card-icon">🌱</div><div><p class="card-title">Tu construis des habitudes qui tiennent</p><p class="card-text">Pas un r&eacute;gime qu'on l&acirc;che en une semaine. Des petits pas, sans restriction ni culpabilit&eacute;.</p></div></div>
-    <div class="card"><div class="card-icon">🎯</div><div><p class="card-title">Tu avances vers ton objectif, pour de vrai</p><p class="card-text">Parce que la r&eacute;gularit&eacute; dans la dur&eacute;e fait plus que n'importe quel r&eacute;gime express.</p></div></div>
+    <div class="card"><div class="card-icon">⚡</div><div><p class="card-title">Tu retrouves de l'&eacute;nergie et de la confiance</p><p class="card-text">Tenir un challenge, c'est aussi se prouver &agrave; soi-m&ecirc;me qu'on peut. Et &ccedil;a, &ccedil;a change tout.</p></div></div>
   </div>
 </section>
 
@@ -288,7 +323,7 @@ footer a{color:var(--muted)}
   <div class="highlight">
     <p class="sec-label">Pourquoi &ccedil;a marche</p>
     <h2>Tu n'as pas &eacute;chou&eacute;. Tu faisais &ccedil;a seule.</h2>
-    <p>La volont&eacute; seule ne suffit pas. Les r&eacute;gimes seuls ne suffisent pas. Ce qui manquait, c'&eacute;tait des filles qui vivent la m&ecirc;me chose que toi, et quelqu'un qui te donne un cap chaque semaine. C'est &ccedil;a, la vraie diff&eacute;rence.</p>
+    <p>La volont&eacute; seule ne suffit pas. Ce qui manquait, c'&eacute;tait des filles qui vivent la m&ecirc;me chose que toi, et quelqu'un qui te donne un cap chaque semaine. Quand tu te sens entour&eacute;e et que tu prends soin de toi en douceur, ton corps, ta t&ecirc;te et ton &eacute;nergie suivent. C'est &ccedil;a, la vraie diff&eacute;rence.</p>
   </div>
 </section>
 
@@ -314,7 +349,7 @@ footer a{color:var(--muted)}
   <div class="price-box">
     <div class="price-amount"><sup>€</sup>14,99<span class="per">/mois</span></div>
     <p class="price-incl">Acc&egrave;s &agrave; ton groupe Snap priv&eacute; de 20 filles<br>+ un challenge motivant chaque semaine</p>
-    <span class="price-limit">⚠️ 100 places &middot; Inscriptions jusqu'au 6 ao&ucirc;t</span>
+    <span class="price-limit">⚠️ 100 places &middot; Inscriptions jusqu'au 15 juillet</span>
     <a href="#" class="btn-glass-white js-onboarding">Je rejoins mon groupe</a>
     <p class="price-transparency">14,99€/mois &middot; Pr&eacute;lev&eacute; automatiquement chaque mois &middot; Tu peux annuler &agrave; tout moment en un clic depuis le mail Stripe &middot; Sans engagement</p>
   </div>
@@ -328,15 +363,16 @@ footer a{color:var(--muted)}
   <h2 class="sec-title">Mes r&eacute;ponses honn&ecirc;tes.</h2>
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">C'est un abonnement ?</div><div class="faq-a"><p>Oui, 14,99€/mois pr&eacute;lev&eacute; automatiquement. Chaque mois tu re&ccedil;ois un re&ccedil;u par mail avec un lien pour g&eacute;rer ou annuler ton abonnement en un clic. Pas d'engagement, tu arr&ecirc;tes quand tu veux.</p></div></div>
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Comment j'annule si je veux arr&ecirc;ter ?</div><div class="faq-a"><p>Dans chaque re&ccedil;u Stripe que tu re&ccedil;ois par mail, il y a un lien &laquo; G&eacute;rer mon abonnement &raquo;. Tu cliques, tu annules, c'est fait. Pas besoin de me contacter.</p></div></div>
-  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Quand &ccedil;a commence ?</div><div class="faq-a"><p>Les inscriptions sont ouvertes du 6 juillet au 6 ao&ucirc;t 2026. Le premier challenge d&eacute;marre le 6 ao&ucirc;t — tu as un mois pour r&eacute;server ta place avant le lancement.</p></div></div>
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Quand &ccedil;a commence ?</div><div class="faq-a"><p>Les inscriptions sont ouvertes jusqu'au 15 juillet 2026. Le premier challenge d&eacute;marre le 15 juillet — r&eacute;serve ta place avant la date de lancement.</p></div></div>
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">C'est quoi les challenges ?</div><div class="faq-a"><p>Chaque semaine je te donne un objectif concret &agrave; tenir : boire 2L d'eau, faire 10 000 pas, z&eacute;ro grignotage, z&eacute;ro g&acirc;teau industriel… On le fait ensemble dans le groupe. C'est moi qui anime, motive et relance.</p></div></div>
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Pourquoi 20 filles max par groupe ?</div><div class="faq-a"><p>Pour que le groupe reste intimiste. On se conna&icirc;t, on s'encourage vraiment, c'est pas un groupe de 200 personnes o&ugrave; personne ne se parle. 100 places au total, 5 groupes de 20.</p></div></div>
-  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">C'est pour qui ?</div><div class="faq-a"><p>Pour toutes les femmes qui veulent perdre du poids ou se remettre en forme. Peu importe ton objectif, ton niveau, ta situation. Si tu veux arr&ecirc;ter de faire &ccedil;a seule, c'est pour toi.</p></div></div>
-  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Et si je perds pas de poids ?</div><div class="faq-a"><p>Je te promets pas un chiffre — personne peut le faire honn&ecirc;tement. Ce que je te promets : t'es entour&eacute;e, tu l&acirc;ches pas seule, et t'as des bases saines pour avancer &agrave; ton rythme.</p></div></div>
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">C'est pour qui ?</div><div class="faq-a"><p>Pour toutes les femmes qui veulent prendre soin d'elles — physiquement et mentalement. Que tu veuilles perdre du poids, construire de bonnes habitudes, te sentir mieux dans ta t&ecirc;te, retrouver de l'&eacute;nergie ou simplement ne plus faire &ccedil;a seule. Si tu veux te sentir bien, c'est pour toi.</p></div></div>
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Et si je veux pas spécialement perdre de poids ?</div><div class="faq-a"><p>Tu es la bienvenue. Le but n'est pas la balance, c'est de te sentir bien dans ton corps et dans ta t&ecirc;te. Les challenges couvrent largement plus que &ccedil;a : hydratation, mouvement, sommeil, bien-&ecirc;tre mental, habitudes alimentaires douces, confiance en soi. Tu trouveras des filles qui veulent la m&ecirc;me chose que toi.</p></div></div>
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Et si je perds pas de poids ?</div><div class="faq-a"><p>Je te promets pas un chiffre — personne peut le faire honn&ecirc;tement. Ce que je te promets : t'es entour&eacute;e, tu l&acirc;ches pas seule, tu te sens mieux dans ta t&ecirc;te, et tu construis des bases saines pour avancer &agrave; ton rythme. Le reste suit.</p></div></div>
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Je dois suivre un r&eacute;gime strict ?</div><div class="faq-a"><p>Non. Z&eacute;ro restriction, z&eacute;ro culpabilit&eacute;. On compte pas les calories, on se punit pas. On avance doucement mais s&ucirc;rement.</p></div></div>
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Comment je suis plac&eacute;e dans mon groupe ?</div><div class="faq-a"><p>Tu r&eacute;ponds &agrave; 2 questions. Je lis chaque r&eacute;ponse et je te place &agrave; la main avec des filles qui ont le m&ecirc;me profil et les m&ecirc;mes objectifs que toi.</p></div></div>
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">&Ccedil;a se passe o&ugrave; ?</div><div class="faq-a"><p>Sur Snap, dans un groupe priv&eacute;. Le lien du groupe ne t'est envoy&eacute; qu'apr&egrave;s ton paiement valid&eacute;. Si t'as pas l'appli Snap, elle est gratuite et s'installe en 2 minutes.</p></div></div>
-  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Quand je re&ccedil;ois mon acc&egrave;s ?</div><div class="faq-a"><p>D&egrave;s que ton paiement est valid&eacute;, je t'envoie le lien du groupe par mail. Le groupe d&eacute;marre officiellement le 6 ao&ucirc;t avec ton premier challenge.</p></div></div>
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Quand je re&ccedil;ois mon acc&egrave;s ?</div><div class="faq-a"><p>D&egrave;s que ton paiement est valid&eacute;, je t'envoie le lien du groupe par mail. Le groupe d&eacute;marre officiellement le 15 juillet avec ton premier challenge.</p></div></div>
 </section>
 
 <div class="hr"></div>
@@ -346,16 +382,16 @@ footer a{color:var(--muted)}
   <div class="founder-photo" id="photo">🌸</div>
   <p class="founder-name">No&eacute;mie — @nonokhb</p>
   <p class="founder-text">Je suis pas coach certifi&eacute;e. Je vends pas de compl&eacute;ments. Je te promets pas -10kg en 3 semaines.</p>
-  <p class="founder-text">Ce que je fais depuis bient&ocirc;t un an : j'anime des groupes de motivation sur Snap pour des femmes qui veulent perdre du poids sans se d&eacute;truire. Mon truc c'est z&eacute;ro restriction, z&eacute;ro culpabilit&eacute; — parce que j'ai vu trop de filles abandonner &agrave; cause d'une m&eacute;thode trop dure.</p>
+  <p class="founder-text">Ce que je fais depuis bient&ocirc;t un an : j'anime des groupes pour des femmes qui veulent prendre soin d'elles — leur corps, leur t&ecirc;te, leurs habitudes — sans se d&eacute;truire. Mon truc c'est z&eacute;ro restriction, z&eacute;ro culpabilit&eacute; — parce que j'ai vu trop de filles abandonner &agrave; cause d'une m&eacute;thode trop dure.</p>
   <p class="founder-text">Dans chaque groupe, je suis la leader pr&eacute;sente au quotidien. Je lance le challenge de la semaine, je motive, je relance, j'encourage. C'est pas un groupe automatique — c'est moi qui anime, chaque semaine.</p>
-  <p class="founder-text">Ce qui m'anime : que chaque fille reparte en se sentant moins seule, plus forte, et un peu plus proche de son objectif. Une question ? Le chat est en bas &agrave; droite.</p>
+  <p class="founder-text">Ce qui m'anime : que chaque fille reparte en se sentant moins seule, mieux dans sa t&ecirc;te, plus forte, et un peu plus proche de la version d'elle-m&ecirc;me qu'elle veut devenir. Une question ? Le chat est en bas &agrave; droite.</p>
 </section>
 
 <div class="hr"></div>
 
 <section class="final" id="join">
   <h2>La prochaine version de toi<br>commence ici.</h2>
-  <p>Tu peux continuer &agrave; r&eacute;essayer seule. Ou rejoindre les filles qui ont arr&ecirc;t&eacute; de se battre contre elles-m&ecirc;mes.</p>
+  <p>Tu peux continuer &agrave; r&eacute;essayer seule. Ou rejoindre les filles qui ont d&eacute;cid&eacute; de se sentir bien, ensemble.</p>
   <div class="hero-ctas">
     <a href="#" class="btn-main js-onboarding">
       Je rejoins mon groupe <span class="price">14,99€/mois</span>
@@ -376,7 +412,7 @@ footer a{color:var(--muted)}
   <h3>Abonnement mensuel</h3>
   <p>L'abonnement est de 14,99€/mois pr&eacute;lev&eacute; automatiquement via Stripe. L'abonnement se renouvelle chaque mois jusqu'&agrave; ton annulation. Tu peux annuler &agrave; tout moment en un clic depuis le lien &laquo; G&eacute;rer mon abonnement &raquo; pr&eacute;sent dans chaque re&ccedil;u Stripe re&ccedil;u par mail. Aucun engagement de dur&eacute;e.</p>
   <h3>Acc&egrave;s &amp; placement</h3>
-  <p>Apr&egrave;s paiement valid&eacute;, tu es plac&eacute;e manuellement dans un groupe selon tes r&eacute;ponses au questionnaire. Le lien du groupe Snap est envoy&eacute; uniquement par mail aux personnes ayant pay&eacute;. Le premier challenge d&eacute;marre le 6 ao&ucirc;t 2026.</p>
+  <p>Apr&egrave;s paiement valid&eacute;, tu es plac&eacute;e manuellement dans un groupe selon tes r&eacute;ponses au questionnaire. Le lien du groupe Snap est envoy&eacute; uniquement par mail aux personnes ayant pay&eacute;. Le premier challenge d&eacute;marre le 15 juillet 2026.</p>
   <h3>Nature du service</h3>
   <p>Il s'agit d'un accompagnement par l'entraide communautaire et l'animation hebdomadaire de challenges. Aucun r&eacute;sultat de perte de poids n'est garanti. Le service ne remplace pas un avis m&eacute;dical ou di&eacute;t&eacute;tique.</p>
   <h3>Remboursement</h3>
@@ -397,7 +433,7 @@ footer a{color:var(--muted)}
 
 <footer>
   <p class="foot-logo">no<span>nokhb</span></p>
-  <p>&copy; 2026 — Groupes de challenges motivants perte de poids</p>
+  <p>&copy; 2026 — Groupes de challenges bien-&ecirc;tre &amp; perte de poids</p>
   <p><a href="#cgu" onclick="showPage('cgu')" style="text-decoration:underline">CGU</a> · <a href="#privacy" onclick="showPage('privacy')" style="text-decoration:underline">Confidentialit&eacute;</a></p>
 </footer>
 
@@ -415,14 +451,18 @@ footer a{color:var(--muted)}
     <div class="stage" id="o-stage">
       <div class="ostep active" data-step="1">
         <p class="o-eyebrow">On fait connaissance</p>
-        <h1 class="q-title">Quel est ton objectif principal ?</h1>
+        <h1 class="q-title">Qu'est-ce qui t'am&egrave;ne ici ?</h1>
         <p class="q-sub">Pour te placer avec des filles qui visent la m&ecirc;me chose que toi.</p>
         <div class="options" data-name="objectif">
           <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Perdre moins de 5 kg</button>
           <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Perdre entre 5 et 10 kg</button>
           <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Perdre entre 10 et 20 kg</button>
           <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Perdre plus de 20 kg</button>
-          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Me remettre en forme / maintenir</button>
+          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Construire de bonnes habitudes de vie</button>
+          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Am&eacute;liorer mon hygi&egrave;ne alimentaire sans me restreindre</button>
+          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Me sentir mieux dans ma t&ecirc;te et dans mon corps</button>
+          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Reprendre confiance en moi</button>
+          <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Me remettre en mouvement / retrouver de l'&eacute;nergie</button>
         </div>
       </div>
 
@@ -477,7 +517,7 @@ footer a{color:var(--muted)}
 var SUPABASE_URL="https://voxpztkzllaipagnflli.supabase.co";
 var SUPABASE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZveHB6dGt6bGxhaXBhZ25mbGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NTE0ODgsImV4cCI6MjA5NjMyNzQ4OH0.PuPuafvUYo3mRE3BQGm1Do6zbfU4ANKDpsedulW_hrE";
 // ⚠️ À remplacer par le NOUVEAU Payment Link Stripe en abonnement mensuel 14,99€/mois récurrent
-var PAYMENT_URL="https://buy.stripe.com/28EdR8gsW4L88X16Zu5ZC04";
+var PAYMENT_URL="https://buy.stripe.com/9B614ncnU012aMPf426c000";
 
 // ===== LANDING NAV =====
 function toggleMenu(){
