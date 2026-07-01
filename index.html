@@ -153,8 +153,30 @@ body.has-banner .hero{padding-top:160px}
 .testi-carousel{position:relative;margin-top:8px;padding:0 4px}
 .testi-track-wrap{overflow:hidden;border-radius:16px}
 .testi-track{display:flex;gap:14px;transition:transform .45s cubic-bezier(.4,0,.2,1);will-change:transform}
-.testi-slide{flex:0 0 100%;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 6px 22px rgba(124,63,192,.08)}
-.testi-slide img{width:100%;display:block;object-fit:contain;background:#fff}
+.testi-slide{
+  flex:0 0 100%;
+  background:linear-gradient(160deg,#f6edfa,#f4e0ee);
+  border:1px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 6px 22px rgba(124,63,192,.08);
+  height:520px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+.testi-slide img{
+  max-width:100%;
+  max-height:100%;
+  width:auto;
+  height:auto;
+  display:block;
+  object-fit:contain;
+  border-radius:8px;
+  box-shadow:0 4px 16px rgba(124,63,192,.12);
+  background:#fff;
+}
 .testi-nav{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
 .testi-btn{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.75);border:1px solid var(--border);color:var(--violet);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .15s,background .2s;backdrop-filter:blur(6px)}
 .testi-btn:hover{transform:translateY(-1px);background:#fff}
@@ -162,6 +184,7 @@ body.has-banner .hero{padding-top:160px}
 .testi-dots{display:flex;gap:6px;justify-content:center;flex:1}
 .testi-dot{width:7px;height:7px;border-radius:50%;background:var(--border);cursor:pointer;transition:background .2s,width .2s}
 .testi-dot.active{background:var(--violet);width:22px;border-radius:50px}
+@media(max-width:600px){.testi-slide{height:440px;padding:14px}}
 
 /* ===== REASSURANCE PAYMENT BLOCK ===== */
 .reassure{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.85);border:1.5px solid rgba(124,63,192,.18);border-radius:12px;padding:10px 14px;margin:14px auto 0;max-width:400px;font-size:12px;font-weight:600;color:var(--ink);line-height:1.4;text-align:left;box-shadow:0 4px 14px rgba(124,63,192,.06)}
