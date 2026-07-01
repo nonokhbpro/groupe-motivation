@@ -137,11 +137,10 @@ footer a{color:var(--muted)}
 .ex-pill .em{font-size:15px}
 
 /* ===== STICKY URGENCY BANNER ===== */
-.urgency{position:fixed;top:54px;left:0;right:0;z-index:99;padding:12px 20px;text-align:center;background:linear-gradient(90deg,#e11d48,#dc2626);border-bottom:1px solid rgba(0,0,0,.15);font-size:15px;font-weight:800;color:#fff;letter-spacing:.3px;box-shadow:0 4px 14px rgba(220,38,38,.25);text-transform:uppercase}
-.urgency strong{color:#fff;font-weight:900}
-.urgency .dot-live{display:inline-block;width:8px;height:8px;border-radius:50%;background:#fff;margin-right:8px;animation:pulse 1.2s infinite;vertical-align:middle;box-shadow:0 0 8px rgba(255,255,255,.8)}
+.urgency{position:fixed;top:54px;left:0;right:0;z-index:99;padding:8px 20px;text-align:center;background:linear-gradient(90deg,rgba(212,83,126,.14),rgba(124,63,192,.14));border-bottom:1px solid var(--border);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-size:12px;font-weight:700;color:var(--violet);letter-spacing:.3px}
+.urgency .dot-live{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--rose);margin-right:6px;animation:pulse 2s infinite;vertical-align:middle}
 body.has-banner{padding-top:0}
-body.has-banner .hero{padding-top:170px}
+body.has-banner .hero{padding-top:160px}
 
 /* ===== LEADER AVATAR IN HERO ===== */
 .hero-leader{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.55);border:1px solid var(--border);padding:6px 14px 6px 6px;border-radius:100px;margin-top:20px;box-shadow:0 4px 14px rgba(124,63,192,.08);animation:fu .5s ease .35s both}
@@ -603,7 +602,7 @@ var LAUNCH_DATE=new Date('2026-08-02T00:00:00');
 function updateUrgency(){
   var el=document.getElementById('urgencyText');
   if(!el)return;
-  el.innerHTML='Il ne reste que <strong>100 places</strong> &middot; Cl&ocirc;ture le 2 ao&ucirc;t';
+  el.innerHTML='<strong>100 inscrites maximum</strong> &middot; Cl&ocirc;ture le 2 ao&ucirc;t';
 }
 updateUrgency();
 
