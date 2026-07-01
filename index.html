@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -136,6 +136,40 @@ footer a{color:var(--muted)}
 .ex-pill{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);padding:9px 16px;border-radius:100px;font-size:13px;font-weight:600;color:var(--ink);box-shadow:0 2px 10px rgba(124,63,192,.06)}
 .ex-pill .em{font-size:15px}
 
+/* ===== STICKY URGENCY BANNER ===== */
+.urgency{position:fixed;top:54px;left:0;right:0;z-index:99;padding:8px 20px;text-align:center;background:linear-gradient(90deg,rgba(212,83,126,.14),rgba(124,63,192,.14));border-bottom:1px solid var(--border);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);font-size:12px;font-weight:700;color:var(--violet);letter-spacing:.3px}
+.urgency .dot-live{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--rose);margin-right:6px;animation:pulse 2s infinite;vertical-align:middle}
+body.has-banner{padding-top:0}
+body.has-banner .hero{padding-top:160px}
+
+/* ===== LEADER AVATAR IN HERO ===== */
+.hero-leader{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.55);border:1px solid var(--border);padding:6px 14px 6px 6px;border-radius:100px;margin-top:20px;box-shadow:0 4px 14px rgba(124,63,192,.08);animation:fu .5s ease .35s both}
+.hero-leader-photo{width:32px;height:32px;border-radius:50%;background:linear-gradient(160deg,var(--rose2),var(--violet2));display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;flex-shrink:0;overflow:hidden}
+.hero-leader-photo img{width:100%;height:100%;object-fit:cover}
+.hero-leader-text{font-size:12px;color:var(--ink);font-weight:600;line-height:1.35;text-align:left}
+.hero-leader-text strong{color:var(--violet)}
+
+/* ===== TESTIMONIALS CAROUSEL ===== */
+.testi-carousel{position:relative;margin-top:8px;padding:0 4px}
+.testi-track-wrap{overflow:hidden;border-radius:16px}
+.testi-track{display:flex;gap:14px;transition:transform .45s cubic-bezier(.4,0,.2,1);will-change:transform}
+.testi-slide{flex:0 0 100%;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 6px 22px rgba(124,63,192,.08)}
+.testi-slide img{width:100%;display:block;object-fit:contain;background:#fff}
+.testi-nav{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
+.testi-btn{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.75);border:1px solid var(--border);color:var(--violet);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .15s,background .2s;backdrop-filter:blur(6px)}
+.testi-btn:hover{transform:translateY(-1px);background:#fff}
+.testi-btn:disabled{opacity:.3;cursor:not-allowed}
+.testi-dots{display:flex;gap:6px;justify-content:center;flex:1}
+.testi-dot{width:7px;height:7px;border-radius:50%;background:var(--border);cursor:pointer;transition:background .2s,width .2s}
+.testi-dot.active{background:var(--violet);width:22px;border-radius:50px}
+
+/* ===== REASSURANCE PAYMENT BLOCK ===== */
+.reassure{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.85);border:1.5px solid rgba(124,63,192,.18);border-radius:12px;padding:10px 14px;margin:14px auto 0;max-width:400px;font-size:12px;font-weight:600;color:var(--ink);line-height:1.4;text-align:left;box-shadow:0 4px 14px rgba(124,63,192,.06)}
+.reassure-icon{font-size:16px;flex-shrink:0}
+.reassure strong{color:var(--violet)}
+.reassure-mini{font-size:11px;color:var(--muted);text-align:center;margin-top:10px;font-weight:500;line-height:1.4}
+.reassure-mini::before{content:'🔒 ';}
+
 .legal-page{display:none;max-width:640px;margin:0 auto;padding:100px 24px 60px}
 .legal-page.active{display:block}
 .legal-page h2{font-size:24px;font-weight:800;margin-bottom:8px;color:var(--ink)}
@@ -211,7 +245,7 @@ footer a{color:var(--muted)}
 @media(max-width:600px){nav{padding:12px 16px}.hero{padding:100px 20px 60px}.hero-ctas{flex-direction:column;width:100%;padding:0 16px}.btn-main{width:100%;justify-content:center}.sec{padding:44px 20px}}
 </style>
 </head>
-<body>
+<body class="has-banner">
 
 <nav>
   <a href="/" class="logo" onclick="showMain();return false;">no<span>nokhb</span></a>
@@ -233,38 +267,36 @@ footer a{color:var(--muted)}
   <a href="#privacy" onclick="showPage('privacy');toggleMenu()">Confidentialit&eacute;</a>
 </div>
 
+<div class="urgency" id="urgencyBanner">
+  <span class="dot-live"></span><span id="urgencyText">Inscriptions ouvertes &middot; Lancement le 2 ao&ucirc;t</span>
+</div>
+
 <div id="mainContent">
 
 <section class="hero">
   <span class="badge"><span class="badge-dot"></span>Un challenge motivant chaque semaine</span>
   <h1>Un challenge par semaine. <em>Un groupe qui te porte.</em></h1>
   <p class="hero-sub">Rejoins 20 filles qui veulent se sentir bien dans leur corps et dans leur t&ecirc;te. Chaque semaine, un challenge pour construire des habitudes qui tiennent. Sans r&eacute;gime. Sans culpabilit&eacute;.</p>
+  <div class="hero-leader">
+    <span class="hero-leader-photo">🌸</span>
+    <span class="hero-leader-text">Anim&eacute; personnellement par <strong>No&eacute;mie</strong> chaque semaine</span>
+  </div>
   <div class="hero-ctas">
     <a href="#" class="btn-main js-onboarding">
-      Je rejoins mon groupe <span class="price">14,99€/mois</span>
+      Je rejoins mon groupe
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
   </div>
-  <p class="hero-note">20 filles par groupe &middot; Anim&eacute; par moi chaque semaine &middot; Sur Snap</p>
+  <p class="reassure-mini">Sans engagement &middot; Annulable en 1 clic &middot; 20 places par groupe</p>
 </section>
 
 <div class="hr"></div>
 
 <section class="sec">
   <p class="sec-label">On se dit les vraies choses</p>
-  <h2 class="sec-title">Tu connais d&eacute;j&agrave; ce sc&eacute;nario.</h2>
-  <p class="sec-body">Tu d&eacute;cides de prendre soin de toi. &Agrave; fond les premiers jours. Et puis la vie reprend le dessus, la motivation retombe, et tu te retrouves seule avec l'impression d'avoir encore l&acirc;ch&eacute;.</p>
-  <p class="sec-body">C'est pas un manque de volont&eacute;. <strong>Personne ne tient sur la dur&eacute;e tout seul.</strong> Et jusqu'ici, tu faisais &ccedil;a seule.</p>
-</section>
-
-<div class="hr"></div>
-
-<section class="sec">
-  <p class="sec-label">Imagine plut&ocirc;t &ccedil;a</p>
-  <h2 class="sec-title">Un lundi matin, z&eacute;ro motivation.</h2>
-  <p class="sec-body">Mais dans ton groupe, le challenge de la semaine est lanc&eacute;. Une fille a d&eacute;j&agrave; partag&eacute; sa petite victoire du jour. Une autre raconte qu'elle a tenu hier soir. Et toi tu te dis &laquo; allez, je m'y mets aussi &raquo;.</p>
-  <p class="sec-body">Pas par discipline. Parce que tu fais partie d'un truc. Parce que les filles comptent sur toi autant que tu comptes sur elles.</p>
-  <p class="sec-body"><strong>C'est &ccedil;a qui fait que cette fois, tu tiens.</strong> Tu te sens mieux dans ta t&ecirc;te, plus l&eacute;g&egrave;re dans ton corps. Et tout le reste — les kilos, la confiance, l'&eacute;nergie — finit par suivre.</p>
+  <h2 class="sec-title">Personne ne tient <em style="font-style:normal;background:linear-gradient(135deg,var(--rose),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent">toute seule.</em></h2>
+  <p class="sec-body">Tu d&eacute;cides de prendre soin de toi, tu tiens quelques jours, puis la vie reprend le dessus. C'est pas un manque de volont&eacute;. <strong>C'est juste que faire &ccedil;a seule, &ccedil;a marche pas.</strong></p>
+  <p class="sec-body">Ici, tu es dans un groupe de 20 filles qui vivent la m&ecirc;me chose que toi, avec un challenge concret chaque semaine. Tu tiens parce que tu fais partie d'un truc — et tout le reste finit par suivre.</p>
 </section>
 
 <div class="hr"></div>
@@ -275,7 +307,7 @@ footer a{color:var(--muted)}
   <div class="steps">
     <div class="stepc"><div class="step-num">1</div><div><p class="step-title">Tu r&eacute;ponds &agrave; 2 questions</p><p class="step-desc">Ce qui t'am&egrave;ne ici, ton rapport au sport. 1 minute, pour que je te place au bon endroit.</p></div></div>
     <div class="stepc"><div class="step-num">2</div><div><p class="step-title">Je te mets avec 20 filles qui te ressemblent</p><p class="step-desc">Je te place &agrave; la main dans un groupe de 20 max avec des filles qui ont les m&ecirc;mes intentions que toi. Perdre du poids, retrouver des bonnes habitudes, te sentir mieux dans ta t&ecirc;te — t'es bien entour&eacute;e.</p></div></div>
-    <div class="stepc"><div class="step-num">3</div><div><p class="step-title">Le 15 juillet, ton groupe d&eacute;marre</p><p class="step-desc">Une fois ton paiement valid&eacute;, je t'envoie le lien du groupe Snap par mail. Le 15 juillet, je te donne ton premier challenge et on avance ensemble.</p></div></div>
+    <div class="stepc"><div class="step-num">3</div><div><p class="step-title">Le 2 ao&ucirc;t, ton groupe d&eacute;marre</p><p class="step-desc">Une fois ton paiement valid&eacute;, je t'envoie le lien du groupe Snap par mail. Le 2 ao&ucirc;t, je te donne ton premier challenge et on avance ensemble.</p></div></div>
   </div>
 </section>
 
@@ -296,11 +328,7 @@ footer a{color:var(--muted)}
     <span class="ex-pill"><span class="em">💧</span>On boit 2L d'eau par jour</span>
     <span class="ex-pill"><span class="em">🚶‍♀️</span>On bouge 20 min chaque jour</span>
     <span class="ex-pill"><span class="em">💜</span>On s'auto-valorise</span>
-    <span class="ex-pill"><span class="em">🍳</span>3 repas maison dans la semaine</span>
     <span class="ex-pill"><span class="em">🧘‍♀️</span>On m&eacute;dite 5 min par jour</span>
-    <span class="ex-pill"><span class="em">😴</span>Au lit avant 23h</span>
-    <span class="ex-pill"><span class="em">📵</span>Z&eacute;ro &eacute;cran apr&egrave;s 22h</span>
-    <span class="ex-pill"><span class="em">🌿</span>10 min pour soi chaque matin</span>
   </div>
 </section>
 
@@ -331,13 +359,34 @@ footer a{color:var(--muted)}
 
 <section class="sec" id="avis">
   <p class="sec-label">Les filles en parlent</p>
-  <h2 class="sec-title">Des filles comme toi. Qui avancent.</h2>
-  <div class="testi"><p>&laquo; C'est gr&acirc;ce &agrave; ton groupe que je ne me sens plus seule dans cette bataille. &raquo;</p><span class="who">— Une participante</span></div>
-  <div class="testi"><p>&laquo; J'avais perdu 15kg gr&acirc;ce au groupe. C'&eacute;tait vraiment b&eacute;n&eacute;fique pour moi. &raquo;</p><span class="who">— L.</span></div>
-  <div class="testi"><p>&laquo; J'ai mis une robe pour la premi&egrave;re fois de ma vie. Pour moi c'est un cap ph&eacute;nom&eacute;nal. &raquo;</p><span class="who">— Fatima</span></div>
-  <div class="testi"><p>&laquo; Gr&acirc;ce aux groupes &ccedil;a aide &agrave; rester motiv&eacute;e, &agrave; se d&eacute;passer et &agrave; partager ensemble. &raquo;</p><span class="who">— BtiSs</span></div>
-  <div class="testi"><p>&laquo; Topissime — merci pour les challenges, les groupes, la bienveillance des filles. &raquo;</p><span class="who">— Une participante</span></div>
-  <p class="testi-note">Captures de vrais messages re&ccedil;us de la communaut&eacute; 💜</p>
+  <h2 class="sec-title">Des vrais messages. Des vraies filles.</h2>
+  <div class="testi-carousel">
+    <div class="testi-track-wrap">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-slide"><img src="img/temoin-1.jpg" alt="Témoignage 1" loading="lazy"></div>
+        <div class="testi-slide"><img src="img/temoin-2.jpg" alt="Témoignage 2" loading="lazy"></div>
+        <div class="testi-slide"><img src="img/temoin-3.jpg" alt="Témoignage 3" loading="lazy"></div>
+        <div class="testi-slide"><img src="img/temoin-4.jpg" alt="Témoignage 4" loading="lazy"></div>
+        <div class="testi-slide"><img src="img/temoin-5.jpg" alt="Témoignage 5" loading="lazy"></div>
+        <div class="testi-slide"><img src="img/temoin-6.jpg" alt="Témoignage 6" loading="lazy"></div>
+        <div class="testi-slide"><img src="img/temoin-7.jpg" alt="Témoignage 7" loading="lazy"></div>
+        <div class="testi-slide"><img src="img/temoin-8.jpg" alt="Témoignage 8" loading="lazy"></div>
+        <div class="testi-slide"><img src="img/temoin-9.jpg" alt="Témoignage 9" loading="lazy"></div>
+        <div class="testi-slide"><img src="img/temoin-10.jpg" alt="Témoignage 10" loading="lazy"></div>
+        <div class="testi-slide"><img src="img/temoin-11.jpg" alt="Témoignage 11" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="testi-nav">
+      <button class="testi-btn" id="testiPrev" aria-label="Précédent">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <div class="testi-dots" id="testiDots"></div>
+      <button class="testi-btn" id="testiNext" aria-label="Suivant">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+  <p class="testi-note">Captures directes de messages re&ccedil;us de la communaut&eacute; 💜</p>
 </section>
 
 <div class="hr"></div>
@@ -349,9 +398,10 @@ footer a{color:var(--muted)}
   <div class="price-box">
     <div class="price-amount"><sup>€</sup>14,99<span class="per">/mois</span></div>
     <p class="price-incl">Acc&egrave;s &agrave; ton groupe Snap priv&eacute; de 20 filles<br>+ un challenge motivant chaque semaine</p>
-    <span class="price-limit">⚠️ 100 places &middot; Inscriptions jusqu'au 15 juillet</span>
-    <a href="#" class="btn-glass-white js-onboarding">Je rejoins mon groupe</a>
-    <p class="price-transparency">14,99€/mois &middot; Pr&eacute;lev&eacute; automatiquement chaque mois &middot; Tu peux annuler &agrave; tout moment en un clic depuis le mail Stripe &middot; Sans engagement</p>
+    <span class="price-limit">⚠️ 100 places &middot; Inscriptions jusqu'au 2 ao&ucirc;t</span>
+    <div class="reassure"><span class="reassure-icon">🔒</span><span><strong>Sans engagement.</strong> Annulable en 1 clic depuis ton mail Stripe, &agrave; tout moment.</span></div>
+    <a href="#" class="btn-glass-white js-onboarding" style="margin-top:16px">Je rejoins mon groupe</a>
+    <p class="price-transparency">14,99€/mois &middot; Pr&eacute;lev&eacute; automatiquement chaque mois &middot; Tu peux annuler &agrave; tout moment</p>
   </div>
   <p class="price-mini">Le lien du groupe Snap t'est envoy&eacute; par mail uniquement apr&egrave;s ton paiement valid&eacute;.</p>
 </section>
@@ -363,7 +413,7 @@ footer a{color:var(--muted)}
   <h2 class="sec-title">Mes r&eacute;ponses honn&ecirc;tes.</h2>
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">C'est un abonnement ?</div><div class="faq-a"><p>Oui, 14,99€/mois pr&eacute;lev&eacute; automatiquement. Chaque mois tu re&ccedil;ois un re&ccedil;u par mail avec un lien pour g&eacute;rer ou annuler ton abonnement en un clic. Pas d'engagement, tu arr&ecirc;tes quand tu veux.</p></div></div>
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Comment j'annule si je veux arr&ecirc;ter ?</div><div class="faq-a"><p>Dans chaque re&ccedil;u Stripe que tu re&ccedil;ois par mail, il y a un lien &laquo; G&eacute;rer mon abonnement &raquo;. Tu cliques, tu annules, c'est fait. Pas besoin de me contacter.</p></div></div>
-  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Quand &ccedil;a commence ?</div><div class="faq-a"><p>Les inscriptions sont ouvertes jusqu'au 15 juillet 2026. Le premier challenge d&eacute;marre le 15 juillet — r&eacute;serve ta place avant la date de lancement.</p></div></div>
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Quand &ccedil;a commence ?</div><div class="faq-a"><p>Les inscriptions sont ouvertes jusqu'au 2 ao&ucirc;t 2026. Le premier challenge d&eacute;marre le 2 ao&ucirc;t — r&eacute;serve ta place avant la date de lancement.</p></div></div>
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">C'est quoi les challenges ?</div><div class="faq-a"><p>Chaque semaine je te donne un objectif concret &agrave; tenir : boire 2L d'eau, faire 10 000 pas, z&eacute;ro grignotage, z&eacute;ro g&acirc;teau industriel… On le fait ensemble dans le groupe. C'est moi qui anime, motive et relance.</p></div></div>
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Pourquoi 20 filles max par groupe ?</div><div class="faq-a"><p>Pour que le groupe reste intimiste. On se conna&icirc;t, on s'encourage vraiment, c'est pas un groupe de 200 personnes o&ugrave; personne ne se parle. 100 places au total, 5 groupes de 20.</p></div></div>
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">C'est pour qui ?</div><div class="faq-a"><p>Pour toutes les femmes qui veulent prendre soin d'elles — physiquement et mentalement. Que tu veuilles perdre du poids, construire de bonnes habitudes, te sentir mieux dans ta t&ecirc;te, retrouver de l'&eacute;nergie ou simplement ne plus faire &ccedil;a seule. Si tu veux te sentir bien, c'est pour toi.</p></div></div>
@@ -372,7 +422,7 @@ footer a{color:var(--muted)}
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Je dois suivre un r&eacute;gime strict ?</div><div class="faq-a"><p>Non. Z&eacute;ro restriction, z&eacute;ro culpabilit&eacute;. On compte pas les calories, on se punit pas. On avance doucement mais s&ucirc;rement.</p></div></div>
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Comment je suis plac&eacute;e dans mon groupe ?</div><div class="faq-a"><p>Tu r&eacute;ponds &agrave; 2 questions. Je lis chaque r&eacute;ponse et je te place &agrave; la main avec des filles qui ont le m&ecirc;me profil et les m&ecirc;mes objectifs que toi.</p></div></div>
   <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">&Ccedil;a se passe o&ugrave; ?</div><div class="faq-a"><p>Sur Snap, dans un groupe priv&eacute;. Le lien du groupe ne t'est envoy&eacute; qu'apr&egrave;s ton paiement valid&eacute;. Si t'as pas l'appli Snap, elle est gratuite et s'installe en 2 minutes.</p></div></div>
-  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Quand je re&ccedil;ois mon acc&egrave;s ?</div><div class="faq-a"><p>D&egrave;s que ton paiement est valid&eacute;, je t'envoie le lien du groupe par mail. Le groupe d&eacute;marre officiellement le 15 juillet avec ton premier challenge.</p></div></div>
+  <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Quand je re&ccedil;ois mon acc&egrave;s ?</div><div class="faq-a"><p>D&egrave;s que ton paiement est valid&eacute;, je t'envoie le lien du groupe par mail. Le groupe d&eacute;marre officiellement le 2 ao&ucirc;t avec ton premier challenge.</p></div></div>
 </section>
 
 <div class="hr"></div>
@@ -394,7 +444,7 @@ footer a{color:var(--muted)}
   <p>Tu peux continuer &agrave; r&eacute;essayer seule. Ou rejoindre les filles qui ont d&eacute;cid&eacute; de se sentir bien, ensemble.</p>
   <div class="hero-ctas">
     <a href="#" class="btn-main js-onboarding">
-      Je rejoins mon groupe <span class="price">14,99€/mois</span>
+      Je rejoins mon groupe &middot; 14,99€/mois
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
   </div>
@@ -412,7 +462,7 @@ footer a{color:var(--muted)}
   <h3>Abonnement mensuel</h3>
   <p>L'abonnement est de 14,99€/mois pr&eacute;lev&eacute; automatiquement via Stripe. L'abonnement se renouvelle chaque mois jusqu'&agrave; ton annulation. Tu peux annuler &agrave; tout moment en un clic depuis le lien &laquo; G&eacute;rer mon abonnement &raquo; pr&eacute;sent dans chaque re&ccedil;u Stripe re&ccedil;u par mail. Aucun engagement de dur&eacute;e.</p>
   <h3>Acc&egrave;s &amp; placement</h3>
-  <p>Apr&egrave;s paiement valid&eacute;, tu es plac&eacute;e manuellement dans un groupe selon tes r&eacute;ponses au questionnaire. Le lien du groupe Snap est envoy&eacute; uniquement par mail aux personnes ayant pay&eacute;. Le premier challenge d&eacute;marre le 15 juillet 2026.</p>
+  <p>Apr&egrave;s paiement valid&eacute;, tu es plac&eacute;e manuellement dans un groupe selon tes r&eacute;ponses au questionnaire. Le lien du groupe Snap est envoy&eacute; uniquement par mail aux personnes ayant pay&eacute;. Le premier challenge d&eacute;marre le 2 ao&ucirc;t 2026.</p>
   <h3>Nature du service</h3>
   <p>Il s'agit d'un accompagnement par l'entraide communautaire et l'animation hebdomadaire de challenges. Aucun r&eacute;sultat de perte de poids n'est garanti. Le service ne remplace pas un avis m&eacute;dical ou di&eacute;t&eacute;tique.</p>
   <h3>Remboursement</h3>
@@ -452,8 +502,8 @@ footer a{color:var(--muted)}
       <div class="ostep active" data-step="1">
         <p class="o-eyebrow">On fait connaissance</p>
         <h1 class="q-title">Qu'est-ce qui t'am&egrave;ne ici ?</h1>
-        <p class="q-sub">Pour te placer avec des filles qui visent la m&ecirc;me chose que toi.</p>
-        <div class="options" data-name="objectif">
+        <p class="q-sub">Plusieurs choix possibles — <strong>3 maximum</strong>. Pour te placer avec des filles qui visent la m&ecirc;me chose que toi.</p>
+        <div class="options multi" data-name="objectif" data-max="3">
           <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Perdre moins de 5 kg</button>
           <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Perdre entre 5 et 10 kg</button>
           <button class="opt"><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Perdre entre 10 et 20 kg</button>
@@ -492,6 +542,12 @@ footer a{color:var(--muted)}
           <input type="email" id="email" placeholder="ton@email.com" autocomplete="email" inputmode="email">
           <span class="err">Il me faut un mail valide pour t'envoyer ton acc&egrave;s.</span>
         </div>
+        <div class="field" id="f-snap">
+          <label for="snap">Ton pseudo Snap</label>
+          <input type="text" id="snap" placeholder="Ex : nonokhb" autocomplete="off">
+          <span class="err">J'ai besoin de ton Snap exact pour te retrouver 💕</span>
+          <p style="font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.45">⚠️ V&eacute;rifie bien l'orthographe — c'est comme &ccedil;a que je te retrouve pour t'ajouter au groupe.</p>
+        </div>
       </div>
     </div>
 
@@ -516,8 +572,23 @@ footer a{color:var(--muted)}
 // ====== CONFIG ======
 var SUPABASE_URL="https://voxpztkzllaipagnflli.supabase.co";
 var SUPABASE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZveHB6dGt6bGxhaXBhZ25mbGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3NTE0ODgsImV4cCI6MjA5NjMyNzQ4OH0.PuPuafvUYo3mRE3BQGm1Do6zbfU4ANKDpsedulW_hrE";
-// ⚠️ À remplacer par le NOUVEAU Payment Link Stripe en abonnement mensuel 14,99€/mois récurrent
 var PAYMENT_URL="https://buy.stripe.com/9B614ncnU012aMPf426c000";
+var LAUNCH_DATE=new Date('2026-08-02T00:00:00');
+
+// ===== URGENCY BANNER COUNTDOWN =====
+function updateUrgency(){
+  var now=new Date();
+  var diff=LAUNCH_DATE-now;
+  var days=Math.max(0,Math.ceil(diff/(1000*60*60*24)));
+  var el=document.getElementById('urgencyText');
+  if(!el)return;
+  if(days>1)el.innerHTML='Plus que <strong>'+days+' jours</strong> pour rejoindre &middot; Lancement le 2 ao&ucirc;t';
+  else if(days===1)el.innerHTML='<strong>Dernier jour</strong> pour t\'inscrire &middot; Lancement demain';
+  else if(days===0)el.innerHTML='<strong>C\'est aujourd\'hui !</strong> Lancement du premier challenge';
+  else el.innerHTML='Le challenge a commenc&eacute; &middot; Contacte-moi pour rejoindre le prochain';
+}
+updateUrgency();
+setInterval(updateUrgency,60*60*1000);
 
 // ===== LANDING NAV =====
 function toggleMenu(){
@@ -550,6 +621,41 @@ if(window.location.hash){
   if(['cgu','privacy'].indexOf(h)>-1)showPage(h);
 }
 
+// ===== TESTIMONIALS CAROUSEL =====
+(function(){
+  var track=document.getElementById('testiTrack');
+  if(!track)return;
+  var slides=track.querySelectorAll('.testi-slide');
+  var total=slides.length;
+  var idx=0;
+  var prev=document.getElementById('testiPrev');
+  var next=document.getElementById('testiNext');
+  var dotsWrap=document.getElementById('testiDots');
+  for(var i=0;i<total;i++){
+    var d=document.createElement('div');
+    d.className='testi-dot'+(i===0?' active':'');
+    (function(k){d.onclick=function(){go(k)}})(i);
+    dotsWrap.appendChild(d);
+  }
+  function go(i){
+    idx=(i+total)%total;
+    track.style.transform='translateX(-'+(idx*100)+'%)';
+    dotsWrap.querySelectorAll('.testi-dot').forEach(function(d,k){d.classList.toggle('active',k===idx)});
+  }
+  prev.onclick=function(){go(idx-1)};
+  next.onclick=function(){go(idx+1)};
+  // swipe support
+  var startX=0,curX=0,touching=false;
+  track.addEventListener('touchstart',function(e){startX=e.touches[0].clientX;touching=true},{passive:true});
+  track.addEventListener('touchmove',function(e){if(touching)curX=e.touches[0].clientX},{passive:true});
+  track.addEventListener('touchend',function(){
+    if(!touching)return;touching=false;
+    var diff=startX-curX;
+    if(Math.abs(diff)>40){go(diff>0?idx+1:idx-1)}
+    startX=0;curX=0;
+  });
+})();
+
 // ===== OPEN ONBOARDING FROM ANY CTA =====
 document.querySelectorAll('.js-onboarding').forEach(function(a){
   a.addEventListener('click',function(e){e.preventDefault();openOnb()});
@@ -566,7 +672,7 @@ function closeOnb(){
 
 // ===== ONBOARDING LOGIC =====
 var TOTAL=3,current=1;
-var answers={objectif:null,sport:null,prenom:"",email:""};
+var answers={objectif:[],sport:null,prenom:"",email:"",snap:""};
 var fill=document.getElementById('o-fill');
 var count=document.getElementById('o-count');
 var backBtn=document.getElementById('o-back');
@@ -583,37 +689,63 @@ function render(){
 }
 function refreshNext(){
   var ok=false;
-  if(current===1)ok=!!answers.objectif;
+  if(current===1)ok=answers.objectif.length>0&&answers.objectif.length<=3;
   else if(current===2)ok=!!answers.sport;
-  else if(current===3)ok=answers.prenom.trim().length>0&&validEmail(answers.email);
+  else if(current===3)ok=answers.prenom.trim().length>0&&validEmail(answers.email)&&answers.snap.trim().length>0;
   nextBtn.disabled=!ok;
 }
 function validEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((e||"").trim())}
 
+// Multi-select handling for question 1 (max 3)
 document.querySelectorAll('.options').forEach(function(grp){
   var name=grp.dataset.name;
+  var isMulti=grp.classList.contains('multi');
+  var max=parseInt(grp.dataset.max||'1',10);
   grp.querySelectorAll('.opt').forEach(function(btn){
     btn.addEventListener('click',function(){
-      grp.querySelectorAll('.opt').forEach(function(b){b.classList.remove('selected')});
-      btn.classList.add('selected');
-      answers[name]=btn.textContent.trim();
+      var val=btn.textContent.trim();
+      if(isMulti){
+        var arr=answers[name];
+        var i=arr.indexOf(val);
+        if(i>-1){
+          arr.splice(i,1);
+          btn.classList.remove('selected');
+        } else {
+          if(arr.length>=max){
+            // remove oldest to keep max
+            var oldestVal=arr.shift();
+            grp.querySelectorAll('.opt').forEach(function(b){
+              if(b.textContent.trim()===oldestVal)b.classList.remove('selected');
+            });
+          }
+          arr.push(val);
+          btn.classList.add('selected');
+        }
+      } else {
+        grp.querySelectorAll('.opt').forEach(function(b){b.classList.remove('selected')});
+        btn.classList.add('selected');
+        answers[name]=val;
+      }
       refreshNext();
     });
   });
 });
 var prenomI=document.getElementById('prenom');
 var emailI=document.getElementById('email');
+var snapI=document.getElementById('snap');
 prenomI.addEventListener('input',function(){answers.prenom=prenomI.value;document.getElementById('f-prenom').classList.remove('invalid');refreshNext()});
 emailI.addEventListener('input',function(){answers.email=emailI.value;document.getElementById('f-email').classList.remove('invalid');refreshNext()});
+snapI.addEventListener('input',function(){answers.snap=snapI.value;document.getElementById('f-snap').classList.remove('invalid');refreshNext()});
 
 backBtn.addEventListener('click',function(){
   if(current>1){current--;render()} else {closeOnb()}
 });
 nextBtn.addEventListener('click',function(){
   if(current<TOTAL){current++;render();return}
-  var fp=document.getElementById('f-prenom'),fe=document.getElementById('f-email');var bad=false;
+  var fp=document.getElementById('f-prenom'),fe=document.getElementById('f-email'),fs=document.getElementById('f-snap');var bad=false;
   if(!answers.prenom.trim()){fp.classList.add('invalid');bad=true}
   if(!validEmail(answers.email)){fe.classList.add('invalid');bad=true}
+  if(!answers.snap.trim()){fs.classList.add('invalid');bad=true}
   if(bad)return;
   submit();
 });
@@ -623,7 +755,13 @@ function submit(){
   fetch(SUPABASE_URL+'/rest/v1/inscriptions',{
     method:'POST',
     headers:{'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},
-    body:JSON.stringify({prenom:answers.prenom.trim(),email:answers.email.trim(),objectif:answers.objectif,sport:answers.sport})
+    body:JSON.stringify({
+      prenom:answers.prenom.trim(),
+      email:answers.email.trim(),
+      objectif:answers.objectif.join(' | '),
+      sport:answers.sport,
+      snap:answers.snap.trim()
+    })
   })
   .then(function(r){if(!r.ok)return r.text().then(function(t){throw new Error(t||r.status)});showDone()})
   .catch(function(e){console.log('[inscription] erreur:',e);nextBtn.classList.remove('loading');nextBtn.disabled=false;alert("Oups, un souci est survenu. Réessaie dans un instant 💜")});
