@@ -662,7 +662,8 @@ if(window.location.hash){
   }
   function go(i){
     idx=(i+total)%total;
-    track.style.transform='translateX(-'+(idx*100)+'%)';
+    // include the 14px gap in translation
+    track.style.transform='translateX(calc(-'+idx+' * (100% + 14px)))';
     dotsWrap.querySelectorAll('.testi-dot').forEach(function(d,k){d.classList.toggle('active',k===idx)});
   }
   prev.onclick=function(){go(idx-1)};
